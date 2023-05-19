@@ -169,6 +169,6 @@ SAVEHIST=4096
 setopt autocd extendedglob
 unsetopt beep nomatch
 bindkey -v
-zstyle :compinstall filename '/home/communist/.config/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
