@@ -1,0 +1,6 @@
+blur on
+shadows_on_csd enable
+titlebar_separator disable
+scratchpad_minimize disable
+blur_passes 4
+blur_radius 8

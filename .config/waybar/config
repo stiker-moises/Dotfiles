@@ -1,0 +1,131 @@
+{
+	"layer": "top",	
+	"position": "bottom",
+	"modules-left": [
+		"sway/workspaces",
+		"custom/space",
+		"sway/mode"
+	],
+	"modules-center": [
+		"clock#1",
+		"clock#2",
+		"clock#3"
+	],
+	"modules-right": [
+		"sway/window",
+		"network",
+		"battery",
+		"custom/mako",
+		"pulseaudio",
+		"idle_inhibitor",
+		"tray"
+	],
+	"sway/workspaces": {
+		"enable-bar-scroll": true,
+		"disable-scroll-wraparound": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"smooth-scrolling-threshold": "4",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "10"
+		}
+	},
+	"clock#1": {
+		"format": "{:%a}",
+		"tooltip": false
+	},
+	"clock#2": {
+		"format": "{:%H:%M}",
+		"tooltip-format": "<big>{:   %H:%M:%S\n%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"interval": 1,
+		"on-click": "qtalarm --toggleOnDup"
+	},
+	"clock#3": {
+		"format": "{:%m-%d}",
+		"tooltip": false
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"tooltip": false,
+		"format-icons": {
+			"activated": "󰈈",
+			"deactivated": "󰈉"
+		}
+	},
+	"network": {
+		"format-wifi": "{essid}  ",
+		"format-ethernet": "",
+		"format-disconnected": "",
+		"tooltip-format-wifi": "Strength: {signalStrength}%",
+		"on-click": "iwgtk",
+		"max-length": "50"
+	},
+	"pulseaudio": {
+		"format": "{volume} {icon}",
+		"format-bluetooth": "{volume} {icon}",
+		"format-muted": "{volume}      ",
+		"format-icons": {
+			"headphones": "󰋋",
+			"handsfree": "󱡏",
+			"headset": "󰋎",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["     ", ""]
+		},
+		"ignored-sinks": ["Easy Effects Sink"],
+		"smooth-scrolling-threshold": "4",
+		"on-click-middle": "~/.config/tofi/scripts/sink.sh",
+		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click": "pavucontrol",
+		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 2.0",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 2.0"
+	},
+	"custom/space": {
+		"format": "  ",
+		"tooltip": false
+	},
+	"sway/mode": {
+		"format": "{}",
+		"max-length": 50
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"battery": {
+		"interval": 60,
+		"states": {
+			"warning": 15,
+			"critical": 8
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": ["", "", "", "", ""],
+		"max-length": 25
+	},
+	"sway/window": {
+		"max-length": 150,
+		"tooltip": false,
+	},
+	"custom/mako": {
+		"format": "󰂚",
+		"format-icons": {
+			"disabled":"",
+			"enabled":"󰂚"
+		},
+		"on-scroll-up": "makoctl restore",
+		"on-scroll-down": "makoctl dismiss",
+		"on-click": "makoctl set-mode",
+		"on-click-middle": "makoctl set-mode",
+		"on-click-right": "makoctl restore",
+		"tooltip": false
+	},
+}

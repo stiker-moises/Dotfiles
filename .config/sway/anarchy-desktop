@@ -1,0 +1,97 @@
+#Binds
+bindsym {
+	#mod4+c exec swaymsg output 'HDMI-A-1' enable && swaymsg output 'HDMI-A-1' pos 0 0 & swaymsg output 'DP-1' pos 1920 0 && swaymsg output 'DP-2' pos 4480 0 && seat '*' cursor move 0 0 & pactl set-card-profile alsa_card.pci-0000_06_00 output:hdmi-stereo && pactl set-default-sink alsa_output.pci-0000_06_00.hdmi-stereo & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 off
+	mod4+c exec swaymsg output 'HDMI-A-1' enable && pactl set-card-profile alsa_card.pci-0000_06_00 output:hdmi-stereo && pactl set-default-sink alsa_output.pci-0000_06_00.hdmi-stereo & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 off
+	#mod4+r exec swaymsg output 'HDMI-A-1' disable & swaymsg output 'HDMI-A-1' pos -1920 0 & swaymsg output 'DP-1' pos 0 0 & swaymsg output 'DP-2' pos 2560 0 && seat '*' cursor move 0 0 & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off & pkill wl-mirror
+	mod4+r exec swaymsg output 'HDMI-A-1' disable && pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off & pkill wl-mirror
+	mod4+v exec zsh -c "pkill wl-mirror && makoctl mode -a camera-shy & wl-mirror DP-1 && makoctl mode -r camera-shy"
+	mod4+z exec zsh -c "pkill wl-mirror && makoctl mode -a camera-shy & wl-mirror DP-2 && makoctl mode -r camera-shy"
+	mod4+backslash exec pkill wl-mirror & makoctl mode -r camera-shy
+	mod4+mod1+z exec pkill wl-mirror
+	mod4+w exec chromium & teams-insiders & stoken-gui & handlr open https://remote.imf.org & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
+	mod4+mod1+c seat '*' cursor set 640 360
+}
+exec_always { 
+	pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off
+	xrandr --output DP-1 --primary
+}
+#Workspace rules
+workspace {
+	1 output 'Acer Technologies XG270HU T1TAA0018523'
+	2 output 'Hewlett Packard HP 24uh CNK7500VZC'
+	3 output 'Hewlett Packard HP 24uh CNK7500VZC'
+	4 output 'Acer Technologies XG270HU T1TAA0018523'
+	9 output 'Samsung Electric Company SAMSUNG 0x00000F00'
+	10 output 'Hewlett Packard HP 24uh CNK7500VZC'
+}
+
+#Window rules
+set {
+	$remote inhibit_idle visible; border none
+	$ws2 move container to workspace number 2
+}
+assign {
+	[class="Wfica"] workspace number 10
+	[app_id="chromium"] workspace number 2
+	[instance="chromium"] workspace number 2
+}
+
+for_window {
+	[class="Anydesk"] $remote; $ws2
+	[app_id="at.yrlf.wl_mirror"] $remote; fullscreen enable; move container to workspace number 9
+	[instance="chromium"] $float
+	[app_id="chromium"] $float
+	[app_id="org.remmina.Remmina"] $remote; $ws2
+	[class="lmirtechconsole.exe"] $remote; $ws2
+	[class="Wfica" title="Office 2016 Desktop"] $remote; move container to workspace number 3
+	[class="Wfica"] $remote
+	[class="Wfica"] $remote
+	[floating] shadows enable
+	[app_id="alacritty"] saturation set 2
+}
+no_focus [class="Wfica"]
+output {
+	HDMI-A-1 {
+		mode 1920x1080@120Hz
+		pos -1920 0
+		disable
+		adaptive_sync on
+		scale 1
+	}
+	DP-1 {
+		pos 0 0
+		adaptive_sync off
+		mode 2560x1440@143.856hz
+	}
+	DP-2 {
+		pos 2560 0
+	}
+}
+exec zsh -c 'sleep 1' && swaymsg output DP-1 mode 2560x1440@143.856hz
+input {
+	'6551:9267:mini_keyboard' {
+		xkb_layout us
+		xkb_variant dvorak
+		repeat_delay 450
+		repeat_rate 20
+	}
+	'6551:9267:mini_keyboard_Mouse' {
+		accel_profile adaptive
+		pointer_accel 1
+	}
+	'117:256:Paris_Commune_Mouse' {
+		tap enabled
+		accel_profile adaptive
+		tap_button_map lmr
+	}
+	'1133:16511:Logitech_G502' {
+		accel_profile flat
+		#rotation_angle 359
+		pointer_accel -0.85
+		repeat_delay 225
+		repeat_rate 8
+	}
+	'1356:3302:Sony_Interactive_Entertainment_Wireless_Controller_Touchpad' {
+		tap disabled
+	}
+}

@@ -1,0 +1,7 @@
+@QListView
+{
+outline: none;
+}@
+QTableWidget {
+    outline: 0;
+}

@@ -1,0 +1,5 @@
+output * {
+	bg ~/.config/sway/wallpaper/background.png stretch
+	adaptive_sync on
+#	max_render_time 1
+}

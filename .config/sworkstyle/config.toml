@@ -1,0 +1,339 @@
+fallback = ''
+[matching]
+'discord' = ''
+#                                                                                 
+#Potential game icons                      
+'steam_app_1817070' = '󱇪'
+'steam_app_1817190' = '󱇪'
+'steam_app_783770' = '󰜃'
+'steam_app_714010' = '󰜃'
+'steam_app_2281730' = '󰜃'
+'CombatMaster.x86_64' = '󰜃'
+'steam_app_1266700' = '󰢚'
+'steam_app_1872550' = '󰢚'
+'steam_app_803330' = '󰢚'
+'steam_app_246620' = ''
+'lmirtechconsole.exe' = ''
+'Anydesk' = ''
+'org.twosheds.iwgtk' = ''
+'at.yrlf.wl_mirror' = ''
+'steam' = ''
+'Steam' = ''
+'steamwebhelper' = ''
+'vlc' = '󰕼'
+'org.qbittorrent.qBittorrent' = '󱑤'
+'Thunderbird' = '󰇮'
+'thunderbird' = '󰇮'
+'Postman' = '󰇮'
+'Insomnia' = ''
+'Bitwarden' = ''
+'Slack' = '󰒱'
+'Code' = ''
+'code-oss' = ''
+'Spotify' = ''
+'/NVIM ?\w*/' = ''
+'/npm/' = ''
+'/node/' = ''
+'/yarn/' = ''
+'Alacritty' = ''
+'foot' = ''
+'org.telegram.desktop' = ''
+'telegramdesktop' = ''
+'Telegram' = ''
+'Wfica' = ''
+'org.remmina.Remmina' = ''
+'SchildiChat' = ''
+'Element' = ''
+'/(?i)Element.*/' = ''
+'nheko' = ''
+'/ - YouTube — Mozilla Firefox' = ''
+'/ - YouTube.*Chromium/' = ''
+'/ - YouTube.*Iridium/' = ''
+'/Firefox .*Private Browsing/' = '󰈉'
+'/(?i)Google Drive.*Firefox/' = ''
+'/(?i)Google Calendar.*Firefox/' = ''
+'/(?i)MAX.*Iridium/' = ''
+'/(?i)MAX.*Chromium/' = ''
+'/(?i)Dashboards -.*Iridium/' = ''
+'/(?i)Dashboards -.*Chromium/' = ''
+'/Twitter/' = ''
+'/(?i)reddit.*Firefox/' = ''
+'/(?i)drive.*Firefox/' = ''
+'/(?i)Google Play.*Firefox/' = ''
+'/(?i)Github/' = ''
+'/Google/' = ''
+'yakyak' = '󰋉'
+'copyq' = '󰅇'
+'Microsoft Teams - Preview' = '󰊻'
+'Microsoft Teams - Insiders' = '󰊻'
+'teams-for-linux' = '󰊻'
+'clonehero' = '󰋄'
+'/trash:/ .*Dolphin/' = ''
+#'/home/.*Documents – Dolphin/' = ''
+#
+'org.kde.dolphin' = '󰉋'
+'/pcmanfm/' = '󰉋'
+'pcmanfm-qt' = '󰉋'
+'pcmanfm-gtk3' = '󰉋'
+'/Pcmanfm/' = '󰉋'
+'/home/.*Dolphin/' = ''
+'org.kde.ark' = ''
+'firefox' = ''
+'Nightly' = ''
+'firefoxdeveloperedition' = ''
+'Google-chrome' = ''
+'Chromium' = ''
+'Chromium-browser' = ''
+'org.kde.kcharselect' = ''
+'gucharmap' = ''
+'Zim' = '󰏪'
+'image-roll' = ''
+'com.github.weclaw1.ImageRoll' = ''
+'pavucontrol' = ''
+'obs' = '󰻂'
+'galculator' = '󰃬'
+'mpv' = '󰐌'
+'yuzu' = '︁'
+'rpcs3' = '︁'
+'blueberry.py' = ''
+'com.github.wwmm.easyeffects' = ''
+'citra' = '︁'
+'Cemu' = '︁'
+'wdisplays' = ''
+'Pinta' = '󰃣'
+'pinta' = '󰃣'
+'dolphin-emu' = '︁'
+'GParted' = '󰋊'
+'/GParted/' = '󰋊'
+'stoken-gui' = '󰌆'
+'polkit-gnome-authentication-agent-1' = ''
+'gcr-prompter' = ''
+'org.inkscape.Inkscape' = ''
+'audacity' = ''
+'anki' = { type = 'generic', value = ''}
+'/(?i)settings*/' = { type = 'generic', value = ''}
+'/(?i)calendar*/' = { type = 'generic', value = ''}
+'org.qutebrowser.qutebrowser' = ''
+'whatsapp-for-linux' = ''
+'Ardour-6.9.0' = ''
+'Gimp' = ''
+'/pdf/' = ''
+'/exe/' = '󰡶'
+'/Steam setup/' = ''
+#do all the dolphin folders 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+#❄︁
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#☁
+#︁
+#
+#
+#
+#
+#
+#
+#
+#
+#☎︁
+#︁
+#✉︁
+#🗩︁
+#︁
+#︁
+#︁
+#⚙︁
+#︁
+#︁
+#︁
+#︁
+#︁
+#︁
+#🖌︁
+#︁
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
