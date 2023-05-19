@@ -72,7 +72,7 @@
 	"pulseaudio": {
 		"format": "{volume} {icon}",
 		"format-bluetooth": "{volume} {icon}",
-		"format-muted": "{volume}      ",
+		"format-muted": "{volume} ",
 		"format-icons": {
 			"headphones": "󰋋",
 			"handsfree": "󱡏",
@@ -80,7 +80,7 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["     ", ""]
+			"default": ["", ""]
 		},
 		"ignored-sinks": ["Easy Effects Sink"],
 		"smooth-scrolling-threshold": "4",
