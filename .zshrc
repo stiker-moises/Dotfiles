@@ -39,7 +39,7 @@ unsetopt ALL_EXPORT
 ### Set alias
 #############
 alias ll='exa -al'
-alias upd='paru -Syu --noconfirm && notify-send --urgency=low "UNSAFE Update completed" ; echo "Safe updates can be accomplished with supd" && ffplay -volume 20 -nodisp -autoexit -hide_banner -loglevel error "/usr/share/sounds/freedesktop/stereo/complete.oga"'
+alias upd='echo "Safe updates can be accomplished with supd" && paru -Syu --noconfirm && notify-send --urgency=low "UNSAFE Update completed" && ffplay -volume 20 -nodisp -autoexit -hide_banner -loglevel error "/usr/share/sounds/freedesktop/stereo/complete.oga"'
 alias supd='paru -Syu --confirm --review && notify-send --urgency=low "Safe Update completed" && ffplay -volume 20 -nodisp -autoexit -hide_banner -loglevel error "/usr/share/sounds/freedesktop/stereo/complete.oga"'
 alias updd='doas reflector --protocol https --threads 4 --latest 20 --sort rate --save /etc/pacman.d/mirrorlist && notify-send --urgency=low "Mirrorlists updated" && paru -Syu --noconfirm && notify-send --urgency=low "Update completed" && ffplay -volume 20 -nodisp -autoexit -hide_banner -loglevel error "/usr/share/sounds/freedesktop/stereo/complete.oga"'
 alias ins='paru -S'
