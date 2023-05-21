@@ -14,6 +14,7 @@ fallback = ''
 'steam_app_803330' = '󰢚'
 'steam_app_246620' = ''
 'lmirtechconsole.exe' = ''
+'qtalarm' = '󰀠'
 'Anydesk' = ''
 'org.twosheds.iwgtk' = ''
 'at.yrlf.wl_mirror' = ''
@@ -120,6 +121,8 @@ fallback = ''
 '/pdf/' = ''
 '/exe/' = '󰡶'
 '/Steam setup/' = ''
+'/Steam - Error/' = ''
+'/(.*)INC. - Dashboard > Home - Chromium/' = ''
 #do all the dolphin folders 
 #
 #
