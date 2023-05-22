@@ -1,8 +1,8 @@
 set {
 	$dm mode "default"
-	$volup exec wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 2.0 && ffplay -nodisp -autoexit -hide_banner -loglevel error /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-	$voldown exec wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 2.0 && ffplay -nodisp -autoexit -hide_banner -loglevel error /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-	$volmute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ffplay -nodisp -autoexit -hide_banner -loglevel error /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+	$volup exec wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 2.0 && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+	$voldown exec wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 2.0 && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+	$volmute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 	$launcher exec tofi-drun --history true --drun-launch=true --prompt-text " "
 }
 bindsym {
