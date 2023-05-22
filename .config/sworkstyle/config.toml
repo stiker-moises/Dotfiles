@@ -123,6 +123,7 @@ fallback = ''
 '/Steam setup/' = ''
 '/Steam - Error/' = ''
 '/(.*)INC. - Dashboard > Home - Chromium/' = ''
+'chromium' = ''
 #do all the dolphin folders 
 #
 #
