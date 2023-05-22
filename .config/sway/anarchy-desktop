@@ -4,8 +4,8 @@ bindsym {
 	mod4+c exec swaymsg output 'HDMI-A-1' enable && pactl set-card-profile alsa_card.pci-0000_06_00 output:hdmi-stereo && pactl set-default-sink alsa_output.pci-0000_06_00.hdmi-stereo & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 off
 	#mod4+r exec swaymsg output 'HDMI-A-1' disable & swaymsg output 'HDMI-A-1' pos -1920 0 & swaymsg output 'DP-1' pos 0 0 & swaymsg output 'DP-2' pos 2560 0 && seat '*' cursor move 0 0 & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off & pkill wl-mirror
 	mod4+r exec swaymsg output 'HDMI-A-1' disable && pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off & pkill wl-mirror
-	mod4+v exec zsh -c "pkill wl-mirror ; makoctl mode -a camera-shy && wl-mirror DP-1 && makoctl mode -r camera-shy"
-	mod4+z exec zsh -c "pkill wl-mirror ; makoctl mode -r camera-shy && wl-mirror DP-2"
+	mod4+v exec "pkill wl-mirror ; makoctl mode -a camera-shy && wl-mirror DP-1 && makoctl mode -r camera-shy"
+	mod4+z exec "pkill wl-mirror ; makoctl mode -r camera-shy && wl-mirror DP-2"
 	mod4+backslash exec makoctl mode -r camera-shy & pkill wl-mirror
 	mod4+mod1+z exec pkill wl-mirror
 	mod4+w exec chromium & teams-insiders & stoken-gui & handlr open https://remote.imf.org & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
