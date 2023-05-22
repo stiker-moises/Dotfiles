@@ -17,3 +17,4 @@ default-timeout=5000
 invisible=1
 [mode=camera-shy]
 output=DP-2
+anchor=top-left
