@@ -111,7 +111,7 @@ fallback = ''
 'gcr-prompter' = ''
 'org.inkscape.Inkscape' = ''
 'audacity' = ''
-'anki' = { type = 'generic', value = ''}
+'anki' = ''
 '/(?i)settings*/' = { type = 'generic', value = ''}
 '/(?i)calendar*/' = { type = 'generic', value = ''}
 'org.qutebrowser.qutebrowser' = ''
