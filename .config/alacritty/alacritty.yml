@@ -50,9 +50,13 @@ colors:
     cyan:    '#00ff00'
     white:   '#dddddd'
 cursor:
-    shape: Beam
+  style:
+    shape: Block
+    blinking: On
 hints:
   alphabet: "hutenosadigpc.r,"
+debug:
+  log_level: off
 # Bindings are always filled by default, but will be replaced when a new
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
@@ -60,6 +64,7 @@ hints:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
+
 key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
