@@ -82,7 +82,15 @@ key_bindings:
   - { key: I,                           mode: Vi|~Search, action: ReceiveChar            }
   #- { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
   - { key: C,      mods: Control,       mode: Vi|~Search, action: ReceiveChar            }
-  #- { key: Y,      mods: Control,       mode: Vi|~Search, action: ScrollLineUp            }
+  - { key: Left,      mods: Control,      chars: "\x1BB"            }
+  - { key: Right,     mods: Control,       chars: "\x1Bf"            }
+  - { key: Right,     mods: Control,      mode: Vi|~Search, chars: "\x1Bf"            }
+  - { key: Up,      mods: Control,       chars: "\x1bOH"             }
+  - { key: Down,      mods: Control,       chars: "\x1bOF"             }
+  - { key: F,      mods: Control,       action: SearchForward             }
+  - { key: F,      mods: Control|Shift,       action: SearchBackward             }
+  - { key: V,      mods: Control,                          action: Paste                   }
+  - { key: V,      mods: Control|Shift,                          action: Paste                   }
   #- { key: E,      mods: Control,       mode: Vi|~Search, action: ScrollLineDown          }
   #- { key: G,                           mode: Vi|~Search, action: ScrollToTop             }
   #- { key: G,      mods: Shift,         mode: Vi|~Search, action: ScrollToBottom          }
@@ -95,7 +103,6 @@ key_bindings:
   #- { key: Copy,                        mode: Vi|~Search, action: ClearSelection          }
   #- { key: V,                           mode: Vi|~Search, action: ToggleNormalSelection   }
   #- { key: V,      mods: Shift,         mode: Vi|~Search, action: ToggleLineSelection     }
-  #- { key: V,      mods: Control,       mode: Vi|~Search, action: ToggleBlockSelection    }
   #- { key: V,      mods: Alt,           mode: Vi|~Search, action: ToggleSemanticSelection }
   #- { key: Return,                      mode: Vi|~Search, action: Open                    }
   #- { key: Z,                           mode: Vi|~Search, action: CenterAroundViCursor    }
