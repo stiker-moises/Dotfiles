@@ -4,4 +4,4 @@ titlebar_separator disable
 scratchpad_minimize disable
 blur_passes 4
 blur_radius 8
-layer_effects "waybar" blur enable
+#layer_effects "waybar" blur enable
