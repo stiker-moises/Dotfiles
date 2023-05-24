@@ -55,6 +55,7 @@ alias reflect='doas reflector --protocol https --threads 4 --latest 200 --fastes
 alias sync='sync && notify-send --urgency=low "Sync completed" && pw-play --volume=0.2 "/usr/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias isomount="mount -o loop"
 alias bt=bat
+alias cat=bat
 alias ls=exa
 alias purge="echo 'you mean pur'"
 alias clean="echo 'you mean pacl'"
@@ -79,7 +80,7 @@ alias installer='paruz'
 autoload -U compinit
 compinit
 bindkey -e
-bindkey "^?" backward-delete-char
+bindkey '^?' backward-delete-char
 bindkey '^[OH' beginning-of-line
 bindkey '^[OF' end-of-line
 bindkey '[[5~' up-line-or-history
