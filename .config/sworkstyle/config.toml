@@ -124,6 +124,7 @@ fallback = ''
 '/Steam - Error/' = ''
 '/(.*)INC. - Dashboard > Home - Chromium/' = ''
 'chromium' = ''
+'XEyes' = '󰈈'
 #do all the dolphin folders 
 #
 #
