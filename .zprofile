@@ -18,4 +18,3 @@ export TDESKTOP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 export LIBSEAT_BACKEND=logind
 export GTK_THEME=ancomblackred
 #export WLR_RENDERER=vulkan
-#export RADV_PERFTEST=gpl
