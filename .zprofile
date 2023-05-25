@@ -17,4 +17,5 @@ export MOZ_USE_XINPUT2=1
 export TDESKTOP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 export LIBSEAT_BACKEND=logind
 export GTK_THEME=ancomblackred
+export SDL_VIDEODRIVER="wayland,x11"
 #export WLR_RENDERER=vulkan
