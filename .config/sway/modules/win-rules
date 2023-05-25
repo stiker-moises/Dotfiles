@@ -31,7 +31,7 @@ for_window {
 	[class="steam_app.*"] $game
 	[instance="steam_app.*"] $game
 	[class="LLBlaze.x86_64"] $game
-	[class="clonehero"] $game
+	[app_id="clonehero"] $game
 	[app_id="CombatMaster.x86_64"] $game
 
 #popup - floating enable; sticky enable
