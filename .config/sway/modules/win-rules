@@ -99,7 +99,7 @@ for_window {
 	[title="https:\/\/max.niceincontact.com\/index.html - Chromium" app_id="chromium" urgent="latest"] $max; focus; move position center
 
 #misc
-	[class="Steam"] floating enable; max_render_time off
+	[class="steam"] floating enable; max_render_time off; blur disabled
 	[app_id="org.telegram.desktop" title="Telegram"] floating disable
 	[urgent=latest] focus
 	[floating] shadows enable
