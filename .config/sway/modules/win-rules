@@ -100,7 +100,7 @@ for_window {
 
 #misc
 	[class="steam"] floating enable; max_render_time off; blur disabled
-	[app_id="org.telegram.desktop" title="Telegram"] floating disable
+	[app_id="org.telegram.desktop" title="Telegram"] floating disable; inhibit_idle none
 	[urgent=latest] focus
 	[floating] shadows enable
 	[app_id="alacritty"] saturation set 2; blur enable
