@@ -125,6 +125,7 @@ fallback = ''
 '/(.*)INC. - Dashboard > Home - Chromium/' = ''
 'chromium' = ''
 'XEyes' = '󰈈'
+'org.kde.ksysguard' = ''
 #do all the dolphin folders 
 #
 #
