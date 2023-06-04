@@ -88,6 +88,7 @@ for_window {
 	[title="^Extracting\s" app_id="(dolphin|org.kde.ark)"] $important
 	[title="Copy Files" app_id="dolphin|org.kde.ark|pcmanfm|pcmanfm-qt"] $important
 	[title="Delete Files" app_id="dolphin|org.kde.ark|pcmanfm|pcmanfm-qt"] $important
+	[title="Removable medium is inserted" app_id="pcmanfm|pcmanfm-qt"] $important
 	[title="Compressing (.*) — Ark" app_id="org.kde.ark"] $important; resize set width 18 ppt
 
 #max - inhibit_idle visible; floating enable; sticky enable; border pixel 1
