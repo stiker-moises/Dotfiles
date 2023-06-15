@@ -22,7 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'bling/vim-bufferline'
-
+Plug 'NvChad/nvim-colorizer.lua'
 call plug#end()
