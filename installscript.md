@@ -5,7 +5,7 @@ install script
 Step 1. Install Arch
 
 $ iwctl
-$ station wlan0 'wifiname'
+$ station wlan0 connect 'wifiname'
 $ exit
 $ archinstall
 	a. f2fs if ssd, ext4 if hdd
