@@ -7,9 +7,9 @@ bindsym {
 	mod4+z exec "pkill wl-mirror ; makoctl mode -r camera-shy & wl-mirror DP-2"
 	mod4+backslash exec "makoctl mode -r camera-shy & pkill wl-mirror"
 	mod4+mod1+z exec "makoctl mode -r camera-shy & pkill wl-mirror"
-	mod4+w exec chromium & teams & stoken-gui & handlr open https://remote.imf.org & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
-	mod4+mod1+c seat '*' cursor set 640 360
-#& remmina -c ~/.local/share/remmina/group_rdp_default_192-168-1-144.remmina
+	mod4+minus exec "mpv --wayland-app-id=mpvrainsounds --volume=20 --loop --player-operation-mode=pseudo-gui ~/Documents/rain.ogg"
+	mod4+w exec chromium & teams & stoken-gui & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
+	mod4+mod1+m exec wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 }
 exec_always { 
 	pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off
@@ -34,6 +34,7 @@ assign {
 	[class="Wfica"] workspace number 10
 	[app_id="chromium"] workspace number 2
 	[instance="chromium"] workspace number 2
+	[app_id="mpvrain"] workspace number 9
 }
 
 for_window {
@@ -49,6 +50,7 @@ for_window {
 	[class="Wfica"] $remote
 	[floating] shadows enable
 	[app_id="alacritty"] saturation set 2
+	[app_id="mpvrain"] fullscreen enable
 }
 no_focus [class="Wfica"]
 output {
