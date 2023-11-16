@@ -5,7 +5,7 @@ exec {
 #		element-desktop --hidden
 #		'sleep 10' && nheko
 		'sleep 10' && deluge-gtk
-		'sleep 10' && qtalarm
+		'sleep 10' && qtalarm --toggleOnDup
 		'sleep 10' && element-desktop --hidden
 	}
 	#element-desktop --hidden
