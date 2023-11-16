@@ -8,7 +8,7 @@ bindsym {
 	mod4+backslash exec "makoctl mode -r camera-shy & pkill wl-mirror"
 	mod4+mod1+z exec "makoctl mode -r camera-shy & pkill wl-mirror"
 	mod4+minus exec "mpv --wayland-app-id=mpvrainsounds --volume=20 --loop --player-operation-mode=pseudo-gui ~/Documents/rain.ogg"
-	mod4+w exec chromium & teams & stoken-gui & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
+	mod4+w exec chromium & teams-for-linux & stoken-gui & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 	mod4+mod1+m exec wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 }
 exec_always { 
