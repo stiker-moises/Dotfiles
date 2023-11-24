@@ -10,8 +10,8 @@ bindsym --no-repeat {
 	mod4+mod1+z exec "makoctl mode -r camera-shy & pkill wl-mirror"
 	mod4+minus exec "swaymsg [app_id='mpvrainsounds'] kill && mpv --wayland-app-id=mpvrainsounds --volume=30 --loop --pause=no --player-operation-mode=pseudo-gui ~/Documents/rain.ogg"
 	mod4+m exec pkill session
-	mod4+w exec chromium & teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland & stoken-gui & wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
-	mod4+mod1+m exec wine /home/communist/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
+	mod4+w exec chromium & teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland & stoken-gui & wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
+	mod4+mod1+m exec wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 }
 exec_always { 
 	pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off
