@@ -45,7 +45,7 @@
 	},
 	"clock#2": {
 		"format": "{:%H:%M}",
-		"tooltip-format": "<big>{:   %H:%M:%S\n%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"tooltip-format": "<big>{:   %H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
 		"interval": 1,
 		"on-click": "qtalarm --toggleOnDup"
 	},
