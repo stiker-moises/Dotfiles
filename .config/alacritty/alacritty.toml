@@ -1,0 +1,146 @@
+[colors.bright]
+black = "#303030"
+blue = "#be0000"
+cyan = "#00ff00"
+green = "#bd3f00"
+magenta = "#bb3a00"
+red = "#ff0000"
+white = "#dddddd"
+yellow = "#f04000"
+
+[colors.normal]
+black = "#202020"
+blue = "#9d0000"
+cyan = "#00cc00"
+green = "#944c00"
+magenta = "#8f0000"
+red = "#7c0000"
+white = "#707070"
+yellow = "#de0000"
+
+[colors.primary]
+background = "#000000"
+bright_foreground = "#ffffff"
+dim_foreground = "#e0e0e0"
+foreground = "#eeeeee"
+
+[colors.footer_bar]
+background = "#900000"
+foreground = "#e0e0e0"
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[debug]
+log_level = "off"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 12
+
+[font.bold]
+family = "Noto Sans Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Noto Sans Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Noto Sans Mono"
+style = "Italic"
+
+[font.normal]
+family = "Noto Sans Mono"
+style = "Medium"
+
+[hints]
+alphabet = "hutenosadigpc.r,"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "Space"
+mode = "~Search"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "I"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "C"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Up"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Up"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Down"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Down"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SearchForward"
+key = "F"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key = "F"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[window]
+dynamic_padding = true
+opacity = 0
+
+[window.padding]
+x = 2
+y = 2
