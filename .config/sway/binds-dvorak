@@ -128,7 +128,7 @@ bindsym {
 	--no-repeat mod1+mod4+p exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/.clipboard.png && wl-copy --type image/png < $(xdg-user-dir PICTURES)/.clipboard.png && wl-paste > $(xdg-user-dir PICTURES)/.clipboard/$(date +'%s.png') && pw-play --volume=0.05 /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 
 # Lock
-	--locked --release mod4+l exec "systemctl suspend & swaylock --screenshot --effect-blur 7x5 --effect-vignette 1:1"
+	--locked --release mod1+mod4+l exec "systemctl suspend & swaylock --screenshot --effect-blur 7x5 --effect-vignette 1:1"
 #gaming mode
 	mod1+shift+0 mode "Gaming Mode - Press Alt+shift+0 to exit"
 }
