@@ -19,5 +19,5 @@ export TDESKTOP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 export LIBSEAT_BACKEND=logind
 export GTK_THEME=ancomblackred
 export SDL_VIDEODRIVER="wayland,x11"
-export QT_STYLE_OVERRIDE=qt5ct
+export QT_STYLE_OVERRIDE=qt5ct-style
 #export WLR_RENDERER=vulkan
