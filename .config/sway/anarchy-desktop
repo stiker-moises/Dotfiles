@@ -9,6 +9,7 @@ bindsym --no-repeat {
 	mod4+backslash exec "makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 960 540"
 	mod4+mod1+z exec "makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 960 540"
 	mod4+minus exec "swaymsg [app_id='mpvrainsounds'] kill & mpv --wayland-app-id=mpvrainsounds --start=0 --volume=30 --loop --pause=no --player-operation-mode=pseudo-gui ~/Documents/rain.ogg"
+	mod4+m exec pkill session
 	mod4+w exec chromium & teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland & stoken-gui & wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 	mod4+mod1+m exec wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 }
@@ -70,7 +71,10 @@ output {
 		pos 2560 0
 	}
 }
-exec zsh -c 'sleep 1' && swaymsg output DP-1 mode 2560x1440@143.856hz
+exec {
+	zsh -c 'sleep 1' && swaymsg output DP-1 mode 2560x1440@143.856hz
+	swayidle timeout 18000 "notify-send 'Take your meds'"
+}
 input {
 	'6551:9267:mini_keyboard' {
 		xkb_layout us
