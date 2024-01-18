@@ -56,8 +56,8 @@ for_window {
 no_focus [class="Wfica"]
 output {
 	HDMI-A-1 {
-		mode 1920x1080@120Hz
-		pos -1920 0
+		mode 2560x1440@119.998hz
+		pos -2560 0
 		disable
 		adaptive_sync on
 		scale 1
