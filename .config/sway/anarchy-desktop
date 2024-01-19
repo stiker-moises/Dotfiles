@@ -57,17 +57,17 @@ no_focus [class="Wfica"]
 output {
 	HDMI-A-1 {
 		mode 2560x1440@119.998hz
-		pos -2560 0
+		pos -1300 0
 		disable
 		adaptive_sync on
-		scale 1
+		scale 2
 	}
 	DP-1 {
 		pos 0 0
 		adaptive_sync off
 	}
 	DP-2 {
-		pos 2560 0
+		pos 2580 0
 	}
 }
 exec {
