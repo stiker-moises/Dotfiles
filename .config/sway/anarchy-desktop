@@ -3,15 +3,16 @@ bindsym --no-repeat {
 	mod4+c exec "swaymsg output 'HDMI-A-1' enable ; pactl set-card-profile alsa_card.pci-0000_06_00 output:hdmi-stereo && pactl set-default-sink alsa_output.pci-0000_06_00.hdmi-stereo & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 off"
 	#mod4+mod1+c exec "swaymsg output 'HDMI-A-1' enable ;  ; pactl set-card-profile alsa_card.pci-0000_06_00 off & pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 off"
 	mod4+r exec "swaymsg output 'HDMI-A-1' disable ; pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off & pkill wl-mirror ; makoctl mode -r camera-shy ; swaymsg [app_id='mpvrainsounds'] kill"
-	mod4+v exec "pkill wl-mirror ; makoctl mode -a camera-shy & swaymsg seat '*' cursor set 3200 720 ; wl-mirror DP-1 && makoctl mode -r camera-shy"
-	mod4+z exec "pkill wl-mirror ; makoctl mode -r camera-shy & wl-mirror DP-2 & swaymsg seat '*' cursor set 5440 540"
-	mod4+mod1+c exec "swaymsg move container to workspace number 9; swaymsg workspace number 9; makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 960 540"
-	mod4+backslash exec "makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 960 540"
-	mod4+mod1+z exec "makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 960 540"
+	mod4+v exec "pkill wl-mirror ; makoctl mode -a camera-shy & swaymsg seat '*' cursor set 2580 720 ; swaymsg input "117:256:Paris_Commune_Mouse" map_to_output DP-1 ; wl-mirror DP-1 && makoctl mode -r camera-shy && swaymsg input "117:256:Paris_Commune_Mouse" map_to_output HDMI-A-1"
+	mod4+z exec "pkill wl-mirror ; makoctl mode -r camera-shy & swaymsg seat '*' cursor set 4840 540 ; swaymsg input "117:256:Paris_Commune_Mouse" map_to_output DP-2 ; wl-mirror DP-2 && swaymsg input "117:256:Paris_Commune_Mouse" map_to_output HDMI-A-1"
+	mod4+mod1+c exec "swaymsg move container to workspace number 9 & swaymsg workspace number 9 & makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 960 540 & swaymsg input "117:256:Paris_Commune_Mouse" map_to_output HDMI-A-1"
+	mod4+backslash exec "makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 640 360 & swaymsg input "117:256:Paris_Commune_Mouse" map_to_output HDMI-A-1"
+	mod4+mod1+z exec "makoctl mode -r camera-shy & pkill wl-mirror & swaymsg seat '*' cursor set 640 360 & swaymsg input "117:256:Paris_Commune_Mouse" map_to_output HDMI-A-1"
 	mod4+minus exec "swaymsg [app_id='mpvrainsounds'] kill & mpv --wayland-app-id=mpvrainsounds --start=0 --volume=30 --loop --pause=no --player-operation-mode=pseudo-gui ~/Documents/rain.ogg"
 	mod4+m exec pkill session
 	mod4+w exec chromium & teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland & stoken-gui & wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 	mod4+mod1+m exec wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
+	mod4+mod1+f exec rm -rf ~/.wine/ && wineboot -u && cp ~/.local/share/LogMeIn\ Rescue\ Technician\ Console ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console && wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LogMeIn\ Rescue\ Technician\ Console/LogMeInRescueTechnicianConsole_x64/LMIRTechConsole.exe
 }
 exec_always { 
 	pactl set-card-profile alsa_card.usb-Creative_Technology_Ltd_Sound_Blaster_X4 output:iec958-stereo && pactl set-default-sink alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo & pactl set-card-profile alsa_card.pci-0000_06_00 off
@@ -73,7 +74,7 @@ output {
 exec {
 	zsh -c 'sleep 0.000000000000001' && swaymsg output DP-1 mode 2560x1440@143.856hz
 	swayidle timeout 18000 "notify-send 'Take your meds'"
-
+	swaymsg input "117:256:Paris_Commune_Mouse" map_to_output HDMI-A-1
 }
 input {
 	'6551:9267:mini_keyboard' {
