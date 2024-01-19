@@ -65,15 +65,15 @@ output {
 	DP-1 {
 		pos 0 0
 		adaptive_sync off
-		mode 2560x1440@143.856hz
 	}
 	DP-2 {
 		pos 2560 0
 	}
 }
 exec {
-	zsh -c 'sleep 1' && swaymsg output DP-1 mode 2560x1440@143.856hz
+	zsh -c 'sleep 0.000000000000001' && swaymsg output DP-1 mode 2560x1440@143.856hz
 	swayidle timeout 18000 "notify-send 'Take your meds'"
+
 }
 input {
 	'6551:9267:mini_keyboard' {
