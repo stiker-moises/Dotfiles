@@ -1,0 +1,1 @@
+EARLYOOM_ARGS="-r 60 -m 3 -s 1 -n --avoid '(^|/)(init|wlroots|firefox|chromium|sway|pipewire|dbus-broker|dbus-broker-launch|mako|sworkstyle|pipewire-pulse|wfica|systemd|swayidle|Xwayland|earlyoom|wireplumber)$'"
