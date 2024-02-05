@@ -17,7 +17,7 @@ bindsym {
 	--no-repeat mod4+y exec firefox
 	--no-repeat control+Shift+escape exec ksysguard
 	--no-repeat mod4+period exec xdg-open ~
-	--no-repeat mod4+a exec env GDK_BACKEND=x11 zim
+	--no-repeat mod4+a exec swaymsg [instance='zim'] kill & env GDK_BACKEND=x11 zim
 	--no-repeat mod4+p exec syncplay --no-gui
 
 # Focus management
