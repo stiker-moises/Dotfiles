@@ -145,3 +145,26 @@ window#waybar.empty #window {
 #pulseaudio {
 	background: #000;
 }
+#pulseaudio-slider {
+	    min-width: 160px;
+}
+#pulseaudio-slider slider {
+	margin-top: -5px;
+	margin-bottom: -5px;
+	margin-right: 5px;
+	margin-left: -5px;
+	padding: 0px;
+	min-height: 12px;
+	min-width: 12px;
+	box-shadow: inset 0px 0px 0px 40px rgba(0,0,0,1), 0px 0px 0px 2px rgba(204,0,0,1);
+	background-color: rgba(0,0,0,1);
+	border-radius: 100px;
+}
+#pulseaudio-slider trough {
+	background-color: rgba(80,80,80,0.5);
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: green;
+}
