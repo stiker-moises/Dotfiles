@@ -4,7 +4,8 @@
 	"modules-left": [
 		"sway/workspaces",
 		"custom/space",
-		"sway/mode"
+		"sway/mode",
+		"systemd-failed-units"
 	],
 	"modules-center": [
 		"clock#1",
@@ -16,14 +17,14 @@
 		"network",
 		"battery",
 		"custom/mako",
-		"pulseaudio",
+		"group/audio",
 		"idle_inhibitor",
 		"tray"
 	],
 	"sway/workspaces": {
 		"enable-bar-scroll": true,
 		"disable-scroll-wraparound": true,
-		"all-outputs": true,
+		"all-outputs": false,
 		"format": "{icon}",
 		"smooth-scrolling-threshold": "4",
 		"format-icons": {
@@ -84,11 +85,17 @@
 		},
 		"ignored-sinks": ["Easy Effects Sink"],
 		"smooth-scrolling-threshold": "4",
+		"scroll-step": "5",
 		"on-click-middle": "~/.config/tofi/scripts/sink.sh",
 		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click": "pavucontrol",
 		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 2.0",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 2.0"
+	},
+	"pulseaudio/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal"
 	},
 	"custom/space": {
 		"format": "  ",
@@ -127,5 +134,22 @@
 		"on-click-middle": "makoctl set-mode",
 		"on-click-right": "makoctl restore",
 		"tooltip": false
+	},
+	"systemd-failed-units": {
+		"hide-on-ok": true, // Do not hide if there is zero failed units.
+		"format": "✗ {nr_failed}",
+		"system": true, // Monitor failed systemwide units.
+		"user": false // Ignore failed user units.
+	},
+	"group/audio": {
+		"orientation": "horizontal",
+		"modules": [ 
+			"pulseaudio",
+			"pulseaudio/slider"
+		],
+		"drawer": {
+			"transition-duration": 500,
+			"transition-left-to-right": false,
+		},
 	},
 }
