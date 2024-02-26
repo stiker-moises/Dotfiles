@@ -18,7 +18,10 @@
 #workspaces button.urgent {
 	background-color: @theme_selected_bg_color;
 }
-
+#idle_inhibitor {
+	margin-top: 2px;
+	margin-bottom: -2px;
+}
 #clock.1,
 #clock.3,
 #pulseaudio-slider,
