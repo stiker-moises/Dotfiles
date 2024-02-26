@@ -16,9 +16,9 @@
 		"sway/window",
 		"network",
 		"battery",
-		"custom/mako",
 		"group/audio",
-		"idle_inhibitor",
+		"privacy",
+		"group/misc",
 		"tray"
 	],
 	"sway/workspaces": {
@@ -46,7 +46,7 @@
 	},
 	"clock#2": {
 		"format": "{:%H:%M}",
-		"tooltip-format": "<big>{:   %H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
+		"tooltip-format": "<big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
 		"interval": 1,
 		"on-click": "qtalarm --toggleOnDup"
 	},
@@ -141,11 +141,39 @@
 		"system": true, // Monitor failed systemwide units.
 		"user": false // Ignore failed user units.
 	},
+	"privacy": {
+		"icon-spacing": 0,
+		"icon-size": 13,
+		"transition-duration": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			}
+		]
+},
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
 			"pulseaudio",
 			"pulseaudio/slider"
+		],
+		"drawer": {
+			"transition-duration": 500,
+			"transition-left-to-right": false,
+		},
+	},
+	"group/misc": {
+		"orientation": "horizontal",
+		"modules": [ 
+			"idle_inhibitor",
+			"custom/mako"
 		],
 		"drawer": {
 			"transition-duration": 500,
