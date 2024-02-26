@@ -1,134 +1,147 @@
 #tray menu {
-	font-size: 14px;
-	font-family: "Noto Sans Medium", "Font Awesome 6 Free Solid:style=Solid" ;
+	font-family: "Noto Sans Medium", "Font Awesome 6 Free Solid:style=Solid";
 }
-#custom-mako:hover {
+
+#custom-mako:hover,
+#clock.2:hover,
+#workspaces button.focused,
+#pulseaudio:hover,
+#idle_inhibitor.deactivated:hover,
+#idle_inhibitor.activated,
+#battery:hover,
+#pulseaudio,
+#battery,
+#workspaces button:hover {
 	color: @theme_selected_bg_color;
 }
+
+#workspaces button.urgent {
+	background-color: @theme_selected_bg_color;
+}
+
 #clock.1,
 #clock.3,
-window#waybar #window {
-	background-color: rgba(0,0,0,.8);
+#pulseaudio-slider,
+window#waybar #window,
+#privacy-item.audio-in,
+#idle_inhibitor,
+#privacy-item.screenshare {
+	background-color: rgba(0, 0, 0, .8);
 }
+
 window#waybar {
-	background-color: rgba(0,0,0,.3);
-	font-size: 14px;
+	background-color: rgba(0, 0, 0, .3);
 }
 
 #clock.2,
 #workspaces,
 #battery,
 #network.wifi,
-#custom-mako {
+#custom-mako,
+#mode,
+#pulseaudio,
+#window {
 	background: #000;
 }
-#window {
-	color: #e0e0e0;
-	background-color: #000;
-}
-#pulseaudio.muted {
+
+#pulseaudio.muted,
+#clock {
 	color: #b0b0b0;
 }
-#workspaces button.visible {
-	background-color: #101010;
-}
+
 #network.wifi,
 #custom-mako {
 	color: #909090;
 }
+
 #clock.2 {
 	color: #fff;
 }
-#clock.2:hover {
-	color: @theme_selected_bg_color;
-}
-#clock {
-	color: #b0b0b0;
-}
+
 #workspaces * {
 	border-radius: 0px;
 }
-#workspaces button.visible {
-	color: #a0a0a0;
-	background-color: #101010;
-}
-#workspaces button,
-#custom-mako {
-	opacity: 0.8;
-}
-#workspaces button.focused:hover {
-	opacity: 1;
-}
-#workspaces button.focused {
-	color: @theme_selected_bg_color;
-	opacity: 0.8;
-}
-#workspaces button.urgent {
-	color: #e0e0e0;
-	opacity: 0.8;
-	background-color: @theme_selected_bg_color;
-}
-#idle_inhibitor.deactivated,
-#workspaces button.urgent:hover {
-	color: #e0e0e0;
-	opacity: 1;
-}
-#idle_inhibitor.deactivated,
-#workspaces button.focused {
-	opacity: 0.8;
-}
-#clock,
-#pulseaudio,
-#idle_inhibitor,
-#battery,
-tooltip, 
-window#waybar {
-	font-family: "Noto Sans Mono Medium";
-}
 
+#workspaces button,
+#custom-mako,
+#workspaces button.urgent,
+#idle_inhibitor.deactivated,
+#workspaces button.focused,
 #pulseaudio,
 #battery,
 #workspaces button:hover {
-	color: @theme_selected_bg_color;
 	opacity: 0.8;
 }
 
+#workspaces button.focused:hover,
+#idle_inhibitor.deactivated,
+#workspaces button.urgent:hover,
 #pulseaudio:hover,
 #idle_inhibitor.deactivated:hover,
 #idle_inhibitor.activated,
 #battery:hover {
-	color: @theme_selected_bg_color;
 	opacity: 1;
 }
-#clock,
-#mode {
-	padding: 0px;
-}
-#tray {
- padding-left: 5px;
- padding-right: 5px;
- margin-left: 5px;
-}
-battery.warning, #network.disconnected {
-	color:  #cccc00;
-}
-battery.critical {
-	color:  #ff0000;
+
+#idle_inhibitor.deactivated,
+#workspaces button.urgent:hover,
+#workspaces button.urgent,
+#window {
+	color: #e0e0e0;
 }
 
 #clock,
 #pulseaudio,
+#idle_inhibitor,
+#battery,
+tooltip,
+window#waybar {
+	font-family: "Noto Sans Mono Medium";
+}
+
+#clock,
+#privacy,
+#mode {
+	padding: 0px;
+}
+
+#tray {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 5px;
+}
+
+battery.warning,
+#network.disconnected {
+	color: #cc0;
+}
+
+battery.critical {
+	color: #f00;
+}
+
+#clock,
 #battery,
 #mode,
-#idle_inhibitor,
-#window,
 #network.wifi,
-#custom-mako,
-#network.disconnected
-{
+#network.disconnected {
 	padding: 0px 5px 0px 5px;
 	margin: 0px 5px 0px 5px;
 }
+
+#window,
+#custom-mako,
+#pulseaudio,
+#idle_inhibitor {
+	padding: 0px 5px 0px 5px;
+	margin-left: 5px;
+}
+
+#pulseaudio-slider {
+	padding: 0px 8px 0px 8px;
+	margin-left: 5px;
+}
+
 #battery.full,
 #network.ethernet,
 window#waybar.empty #window {
@@ -136,18 +149,16 @@ window#waybar.empty #window {
 	padding: 0px 0px 0px 0px;
 	opacity: 0;
 }
+
 #network.disconnected,
 #tray {
-	background: rgba(0,0,0,.8);
+	background: rgba(0, 0, 0, .8);
 }
-#idle_inhibitor,
-#mode,
-#pulseaudio {
-	background: #000;
-}
+
 #pulseaudio-slider {
-	    min-width: 160px;
+	min-width: 160px;
 }
+
 #pulseaudio-slider slider {
 	margin-top: -5px;
 	margin-bottom: -5px;
@@ -156,15 +167,44 @@ window#waybar.empty #window {
 	padding: 0px;
 	min-height: 12px;
 	min-width: 12px;
-	box-shadow: inset 0px 0px 0px 40px rgba(0,0,0,1), 0px 0px 0px 2px rgba(204,0,0,1);
-	background-color: rgba(0,0,0,1);
+	box-shadow: inset 0px 0px 0px 40px rgba(0, 0, 0, 1), 0px 0px 0px 2px rgba(204, 0, 0, 1);
+	background-color: #000;
 	border-radius: 100px;
 }
+
 #pulseaudio-slider trough {
-	background-color: rgba(80,80,80,0.5);
+	background-color: rgba(80, 80, 80, 0.5);
 }
+
 #pulseaudio-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: green;
+	min-width: 10px;
+	border-radius: 5px;
+}
+
+@keyframes flickerAnimation {
+	0% {color: rgba(204, 0, 0, 1);}
+	10% {color: rgba(204, 0, 0, 1);}
+	50% {color: rgba(204, 0, 0, 0);}
+	90% {color: rgba(204, 0, 0, 1);}
+	100% {color: rgba(204, 0, 0, 1);}
+}
+#privacy {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#privacy-item.audio-in,
+#privacy-item.screenshare {
+	animation: flickerAnimation 3s infinite;
+}
+
+#privacy-item.screenshare {
+	margin-right: 0px;
+	margin-left: 5px;
+	padding-left: 7px;
+}
+
+#privacy-item.audio-in {
+	margin-left: 0px;
+	padding-left: 3px;
+	padding-right: 5px;
 }
