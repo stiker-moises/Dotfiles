@@ -123,17 +123,20 @@
 		"tooltip": false,
 	},
 	"custom/mako": {
-		"format": "󰂚",
 		"format-icons": {
-			"disabled":"",
-			"enabled":"󰂚"
+			"default":"󰂚",
+			"dnd":"󰂛"
 		},
+		"interval": "once",
+		"return-type": "json",
+		"format": "{}{icon}",
+		"on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
+		"exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
+		"signal": 11,
 		"on-scroll-up": "makoctl restore",
 		"on-scroll-down": "makoctl dismiss",
-		"on-click": "makoctl set-mode",
-		"on-click-middle": "makoctl set-mode",
-		"on-click-right": "makoctl restore",
-		"tooltip": false
+		"on-click-right": "makoctl dismiss -a",
+		"on-click-middle": "makoctl restore & makoctl restore & makoctl restore & makoctl restore & makoctl restore & makoctl restore"
 	},
 	"systemd-failed-units": {
 		"hide-on-ok": true, // Do not hide if there is zero failed units.
@@ -172,8 +175,8 @@
 	"group/misc": {
 		"orientation": "horizontal",
 		"modules": [ 
-			"idle_inhibitor",
-			"custom/mako"
+			"custom/mako",
+			"idle_inhibitor"
 		],
 		"drawer": {
 			"transition-duration": 500,
