@@ -50,6 +50,7 @@ window#waybar {
 }
 
 #network.wifi,
+#idle_inhibitor.deactivated,
 #custom-mako {
 	color: #909090;
 }
@@ -83,7 +84,6 @@ window#waybar {
 	opacity: 1;
 }
 
-#idle_inhibitor.deactivated,
 #workspaces button.urgent:hover,
 #workspaces button.urgent,
 #window {
