@@ -15,5 +15,5 @@ exec_always {
 	kanshi
 	zsh -c 'sleep 1' && sworkstyle
 	pkill sworkstyle
-	--no-startup-id /usr/bin/swaddle &
+	--no-startup-id swaddle &
 }
