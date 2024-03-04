@@ -9,12 +9,11 @@ exec {
 	bato
 #	wl-paste -t text --watch clipman store
 	wljoywake
-	sway-audio-idle-inhibit
 }
 bar swaybar_command waybar
 exec_always {
 	kanshi
 	zsh -c 'sleep 1' && sworkstyle
 	pkill sworkstyle
-	
+	--no-startup-id /usr/bin/swaddle &
 }
