@@ -3,6 +3,7 @@
 	"position": "bottom",
 	"modules-left": [
 		"sway/workspaces",
+		"hyprland/workspaces",
 		"custom/space",
 		"sway/mode",
 		"systemd-failed-units"
@@ -14,7 +15,7 @@
 	],
 	"modules-right": [
 		"sway/window",
-		"network",
+	"network",
 		"battery",
 		"group/audio",
 		"privacy",
@@ -22,6 +23,25 @@
 		"tray"
 	],
 	"sway/workspaces": {
+		"enable-bar-scroll": true,
+		"disable-scroll-wraparound": true,
+		"all-outputs": false,
+		"format": "{icon}",
+		"smooth-scrolling-threshold": "4",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "10"
+		}
+	},
+	"hyprland/workspaces": {
 		"enable-bar-scroll": true,
 		"disable-scroll-wraparound": true,
 		"all-outputs": false,
@@ -136,7 +156,7 @@
 		"on-scroll-up": "makoctl restore",
 		"on-scroll-down": "makoctl dismiss",
 		"on-click-right": "makoctl dismiss -a",
-		"on-click-middle": "makoctl restore & makoctl restore & makoctl restore & makoctl restore & makoctl restore & makoctl restore"
+		"on-click-middle": "makoctl restore ; makoctl restore ; makoctl restore ; makoctl restore ; makoctl restore ; makoctl restore"
 	},
 	"systemd-failed-units": {
 		"hide-on-ok": true, // Do not hide if there is zero failed units.
