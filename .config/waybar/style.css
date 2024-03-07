@@ -11,6 +11,7 @@
 #battery:hover,
 #pulseaudio,
 #battery,
+#workspaces button.active,
 #workspaces button:hover {
 	color: @theme_selected_bg_color;
 }
