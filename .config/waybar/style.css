@@ -44,6 +44,7 @@ window#waybar {
 #network.wifi,
 #custom-mako,
 #mode,
+#submap,
 #pulseaudio,
 #window {
 	background: #000;
@@ -106,7 +107,8 @@ window#waybar {
 
 #clock,
 #privacy,
-#mode {
+#mode,
+#submap {
 	padding: 0px;
 }
 
@@ -128,6 +130,7 @@ battery.critical {
 #clock,
 #battery,
 #mode,
+#submap,
 #network.wifi,
 #network.disconnected {
 	padding: 0px 5px 0px 5px;
