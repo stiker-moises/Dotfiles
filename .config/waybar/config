@@ -5,6 +5,7 @@
 		"sway/workspaces",
 		"hyprland/workspaces",
 		"custom/space",
+		"hyprland/submap",
 		"sway/mode",
 		"systemd-failed-units"
 	],
