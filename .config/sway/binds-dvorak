@@ -4,6 +4,7 @@ set {
 	$voldown exec wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 2.0 && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 	$volmute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 	$launcher exec tofi-drun --history true --drun-launch=true --prompt-text " "
+	$sinkswitch exec pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sed '/easyeffects_sink/d' | sed "/$(pactl get-default-sink)/d" | tofi --prompt-text " " --height 118 --width 480 --auto-accept-single true )
 }
 bindsym {
 # Hide the bar
@@ -15,7 +16,7 @@ bindsym {
 # Programs
 	--no-repeat mod4+u exec 'alacritty msg create-window || alacritty'
 	--no-repeat mod4+y exec firefox
-	--no-repeat control+Shift+escape exec ksysguard
+	--no-repeat control+Shift+escape exec resources
 	--no-repeat mod4+period exec xdg-open ~
 	--no-repeat mod4+a exec swaymsg [instance='zim'] kill & env GDK_BACKEND=x11 zim
 	--no-repeat mod4+p exec syncplay --no-gui
@@ -91,14 +92,6 @@ bindsym {
 	mod1+0 workspace number 10
 	mod1+semicolon workspace number 10
 
-# Move window to output
-	mod4+apostrophe move container to output left
-	mod4+comma move container to output right
-
-# Move workspace to output
-	mod1+apostrophe move workspace to output left
-	mod1+comma move workspace to output right
-
 # Volume control
 	--locked XF86AudioRaiseVolume $volup
 	--locked mod1+up $volup
@@ -107,6 +100,8 @@ bindsym {
 	--locked mod1+down $voldown
 	--locked mod1+i $voldown
 	--locked XF86AudioMute $volmute
+	--locked --no-repeat mod1+apostrophe $sinkswitch
+
 # Brightness controls screen backlight set screen/keyboard in ~/.config/sway/$(cat /etc/hostname)
 	--locked XF86MonBrightnessUp exec light -A 10 && light -G > $SWAYSOCK.wob
 	--locked XF86MonBrightnessDown exec light -U 10 && light -G > $SWAYSOCK.wob
