@@ -40,6 +40,7 @@ for_window {
 	[app_id="org.twosheds.iwgtk"] $popup
 	[app_id="iwgtk"] $popup
 	[app_id="ksysguard"] $popup
+	[app_id="net.nokyan.Resources"] $popup
 	[app_id="galculator"] $popup
 	[title="(?:Open|Save) (?:File|Folder|As)" app_id="dolphin|org.kde.ark|pcmanfm|pcmanfm-qt"] $popup
 	[title="^(File|Folder)\s*Already Exists\s*—\s*" app_id="dolphin|org.kde.ark|pcmanfm|pcmanfm-qt"] $popup
@@ -104,6 +105,7 @@ for_window {
 
 #misc
 	[class="steam"] floating enable; max_render_time off; blur disabled
+	[instance="steamwebhelper"] floating enable; max_render_time off; blur disabled
 	[app_id="org.telegram.desktop" title="Telegram"] floating disable; inhibit_idle none
 	[urgent=latest] focus
 	[floating] shadows enable
@@ -111,3 +113,4 @@ for_window {
 	[app_id="firefox" title="Firefox — Sharing Indicator"] floating enable; kill
 	[title="Wine System Tray"] floating enable; kill
 }
+no_focus [app_id="at.yrlf.wl_mirror"]
