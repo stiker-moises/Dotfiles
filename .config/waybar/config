@@ -147,7 +147,7 @@
 	"custom/mako": {
 		"format-icons": {
 			"default":"󰂚",
-			"dnd":"󰂛"
+			"dnd":"<span foreground='#cc0000'>󰂛</span>"
 		},
 		"interval": "once",
 		"return-type": "json",
