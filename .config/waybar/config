@@ -16,7 +16,8 @@
 	],
 	"modules-right": [
 		"sway/window",
-	"network",
+		"hyprland/window",
+		"network",
 		"battery",
 		"group/audio",
 		"privacy",
