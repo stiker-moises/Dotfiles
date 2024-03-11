@@ -141,7 +141,7 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 "chromium" = ""
 "XEyes" = "󰈈"
 "org.kde.ksysguard" = ""
-
+"net.nokyan.Resources" = ""
 
 # [initial_class]
 # "DEFAULT" = " {class}: {title}"
