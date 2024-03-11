@@ -63,10 +63,6 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 "Code" = ""
 "code-oss" = ""
 "Spotify" = ""
-"/NVIM/" = "󱩼"
-"/npm/" = ""
-"/node/" = ""
-"/yarn/" = ""
 "Alacritty" = ""
 "foot" = ""
 "org.telegram.desktop" = ""
@@ -77,24 +73,17 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 "org.remmina.Remmina" = ""
 "SchildiChat" = ""
 "Element" = ""
-"/(?i)Element.*/" = ""
 "nheko" = ""
 "FreeTube" = ""
-
-"/Google/" = ""
 "yakyak" = "󰋉"
 "copyq" = "󰅇"
 "Microsoft Teams - Preview" = "󰊻"
 "Microsoft Teams - Insiders" = "󰊻"
 "teams-for-linux" = "󰊻"
 "clonehero" = "󰋄"
-"/trash:/ .*Dolphin/" = ""
 "org.kde.dolphin" = "󰉋"
-"/pcmanfm/" = "󰉋"
 "pcmanfm-qt" = "󰉋"
 "pcmanfm-gtk4" = "󰉋"
-"/Pcmanfm/" = "󰉋"
-"/home/.*Dolphin/" = ""
 "org.kde.ark" = ""
 "firefox" = ""
 "Nightly" = ""
@@ -150,15 +139,16 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 # [initial_class_active]
 # "(?i)Kitty" = "*TERM*"
 
-[title_in_class."(?i)chromium"]
+[title_in_class."chromium"]
 "(.*)INC. - Dashboard > Home - Chromium" = ""
 "(?i)MAX.*Chromium" = ""
 "(?i)Dashboards -.*Chromium" = ""
-"/ - YouTube.*Chromium/" = ""
+"(.*) - YouTube.*Chromium" = ""
 "(?i)Github" = ""
+"/Google/" = ""
 # regex captures support is supported
 
-[title_in_class."(?i)firefox"]
+[title_in_class."firefox"]
 ".*Twitter — Mozilla Firefox" = ""
 "(?i)Google Drive.*Firefox" = ""
 "(?i)Google Calendar.*Firefox" = ""
@@ -169,6 +159,13 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 " - YouTube — Mozilla Firefox" = ""
 "Firefox .*Private Browsing" = "󰈉"
 "(?i)Github" = ""
+"/Google/" = ""
+
+[title_in_class."Alacritty"]
+"(.*) - NVIM" = "󱩼"
+
+[title_in_class."pcmanfm-qt"]
+"Preferences" = ""
 # [title_in_initial_class."(?i)kitty"]
 # "(?i)neomutt" = "neomutt"
 
