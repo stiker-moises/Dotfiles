@@ -3,6 +3,7 @@
 }
 
 #custom-mako:hover,
+#custom-mako.do-not-disturb,
 #clock.2:hover,
 #workspaces button.focused,
 #pulseaudio:hover,
@@ -50,7 +51,8 @@ window#waybar {
 	background: #000;
 }
 
-#pulseaudio.muted,
+#pulseaudio.sink.muted,
+#pulseaudio.source.source-muted,
 #clock {
 	color: #b0b0b0;
 }
@@ -182,11 +184,6 @@ window#waybar.empty #window {
 
 #pulseaudio-slider trough {
 	background-color: rgba(80, 80, 80, 0.5);
-}
-
-#pulseaudio-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
 }
 
 @keyframes flickerAnimation {
