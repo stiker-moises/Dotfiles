@@ -20,6 +20,7 @@
 		"network",
 		"battery",
 		"group/audio",
+		"pulseaudio#source",
 		"privacy",
 		"group/misc",
 		"tray"
@@ -92,7 +93,7 @@
 		"on-click": "iwgtk",
 		"max-length": "50"
 	},
-	"pulseaudio": {
+	"pulseaudio#sink": {
 		"format": "{volume} {icon}",
 		"format-bluetooth": "{volume} {icon}",
 		"format-muted": "{volume} 󰝟",
@@ -182,11 +183,19 @@
 				"tooltip-icon-size": 24
 			}
 		]
-},
+	},
+	"pulseaudio#source": {
+		"format": "{format_source}",
+		"format-source": "",
+		"format-source-muted": "",
+		"on-click": "pkill pavucontrol ; pavucontrol",
+		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sed '/easyeffects_sink/d' | sed \"/$(pactl get-default-sink)/d\" | tofi --prompt-text \" \" --height 118 --width 480 --anchor bottom-right --margin-right 80 --margin-bottom 50 --auto-accept-single true )",
+		"on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    },
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
-			"pulseaudio",
+			"pulseaudio#sink",
 			"pulseaudio/slider"
 		],
 		"drawer": {
