@@ -20,7 +20,6 @@
 		"network",
 		"battery",
 		"group/audio",
-		"pulseaudio#source",
 		"privacy",
 		"group/misc",
 		"tray"
@@ -65,16 +64,19 @@
 	},
 	"clock#1": {
 		"format": "{:%a}",
+		"timezone": "America/Indiana/Indianapolis",
 		"tooltip": false
 	},
 	"clock#2": {
 		"format": "{:%H:%M}",
 		"tooltip-format": "<big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
+		"timezone": "America/Indiana/Indianapolis",
 		"interval": 1,
 		"on-click": "qtalarm --toggleOnDup"
 	},
 	"clock#3": {
 		"format": "{:%m-%d}",
+		"timezone": "America/Indiana/Indianapolis",
 		"tooltip": false
 	},
 	"idle_inhibitor": {
@@ -197,7 +199,8 @@
 		"orientation": "horizontal",
 		"modules": [ 
 			"pulseaudio#sink",
-			"pulseaudio/slider"
+			"pulseaudio/slider",
+			"pulseaudio#source"
 		],
 		"drawer": {
 			"transition-duration": 500,
