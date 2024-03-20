@@ -1,5 +1,5 @@
 #!/bin/bash
-RET=$(echo -e "Toggle\nDaylight\nNight\nDim" | tofi --prompt-text " " --height 148 --width 140 )
+RET=$(echo -e "Toggle\nDaylight\nNight\nDim" | tofi --prompt-text " " --height 148 --width 125 )
 case $RET in
 	Daylight) python ~/.config/tofi/scripts/broadcast_color.py 41134 0 65535 7000 ;;
 	Night) python ~/.config/tofi/scripts/broadcast_color.py 41134 0 65535 2500 ;;
