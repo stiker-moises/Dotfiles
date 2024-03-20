@@ -64,19 +64,16 @@
 	},
 	"clock#1": {
 		"format": "{:%a}",
-		"timezone": "America/Indiana/Indianapolis",
 		"tooltip": false
 	},
 	"clock#2": {
 		"format": "{:%H:%M}",
 		"tooltip-format": "<big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
-		"timezone": "America/Indiana/Indianapolis",
 		"interval": 1,
 		"on-click": "qtalarm --toggleOnDup"
 	},
 	"clock#3": {
 		"format": "{:%m-%d}",
-		"timezone": "America/Indiana/Indianapolis",
 		"tooltip": false
 	},
 	"idle_inhibitor": {
@@ -146,6 +143,11 @@
 	"sway/window": {
 		"max-length": 150,
 		"tooltip": false,
+	},
+	"hyprland/window": {
+		"max-length": 150,
+		"tooltip": false,
+		"separate-outputs": true
 	},
 	"custom/mako": {
 		"format-icons": {
