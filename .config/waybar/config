@@ -166,13 +166,13 @@
 		"on-scroll-up": "makoctl restore",
 		"on-scroll-down": "makoctl dismiss",
 		"on-click-right": "makoctl dismiss -a",
-		"on-click-middle": "makoctl restore ; makoctl restore ; makoctl restore ; makoctl restore ; makoctl restore ; makoctl restore"
+		"on-click-middle": "makoctl restore && makoctl restore && makoctl restore && makoctl restore && makoctl restore && makoctl restore"
 	},
 	"systemd-failed-units": {
-		"hide-on-ok": true, // Do not hide if there is zero failed units.
+		"hide-on-ok": true,
 		"format": "✗ {nr_failed}",
-		"system": true, // Monitor failed systemwide units.
-		"user": false // Ignore failed user units.
+		"system": true,
+		"user": false
 	},
 	"privacy": {
 		"icon-spacing": 0,
