@@ -155,13 +155,13 @@
 	"custom/mako": {
 		"format-icons": {
 			"default":"󰂚",
-			"dnd":"<span foreground='#cc0000'>󰂛</span>"
+			"dnd":"󰂛"
 		},
 		"interval": "once",
 		"return-type": "json",
 		"format": "{}{icon}",
-		"on-click": "~/.config/waybar/script/dnd.sh toggle; waybar-signal dnd",
-		"exec": "~/.config/waybar/script/dnd.sh status",
+		"on-click": "~/.config/waybar/scripts/dnd.sh toggle; waybar-signal dnd",
+		"exec": "~/.config/waybar/scripts/dnd.sh status",
 		"signal": 11,
 		"on-scroll-up": "makoctl restore",
 		"on-scroll-down": "makoctl dismiss",
