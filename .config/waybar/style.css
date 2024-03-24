@@ -177,7 +177,7 @@ window#waybar.empty #window {
 	padding: 0px;
 	min-height: 12px;
 	min-width: 12px;
-	box-shadow: inset 0px 0px 0px 40px rgba(0, 0, 0, 1), 0px 0px 0px 2px rgba(204, 0, 0, 1);
+	box-shadow: inset 0px 0px 0px 40px rgba(0, 0, 0, 1), 0px 0px 0px 2px @theme_selected_bg_color;
 	background-color: #000;
 	border-radius: 100px;
 }
@@ -187,11 +187,11 @@ window#waybar.empty #window {
 }
 
 @keyframes flickerAnimation {
-	0% {color: rgba(204, 0, 0, 1);}
-	10% {color: rgba(204, 0, 0, 1);}
-	50% {color: rgba(204, 0, 0, 0);}
-	90% {color: rgba(204, 0, 0, 1);}
-	100% {color: rgba(204, 0, 0, 1);}
+	0% {color: @theme_selected_bg_color;}
+	10% {color: @theme_selected_bg_color;}
+	50% {color: black;}
+	90% {color: @theme_selected_bg_color;}
+	100% {color: @theme_selected_bg_color;}
 }
 #privacy {
 	background-color: rgba(0, 0, 0, 0);
