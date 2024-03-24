@@ -64,16 +64,19 @@
 	},
 	"clock#1": {
 		"format": "{:%a}",
+		"timezone": "America/Indiana/Indianapolis",
 		"tooltip": false
 	},
 	"clock#2": {
 		"format": "{:%H:%M}",
 		"tooltip-format": "<big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
+		"timezone": "America/Indiana/Indianapolis",
 		"interval": 1,
 		"on-click": "qtalarm --toggleOnDup"
 	},
 	"clock#3": {
 		"format": "{:%m-%d}",
+		"timezone": "America/Indiana/Indianapolis",
 		"tooltip": false
 	},
 	"idle_inhibitor": {
@@ -157,8 +160,8 @@
 		"interval": "once",
 		"return-type": "json",
 		"format": "{}{icon}",
-		"on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
-		"exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
+		"on-click": "~/.config/waybar/script/dnd.sh toggle; waybar-signal dnd",
+		"exec": "~/.config/waybar/script/dnd.sh status",
 		"signal": 11,
 		"on-scroll-up": "makoctl restore",
 		"on-scroll-down": "makoctl dismiss",
