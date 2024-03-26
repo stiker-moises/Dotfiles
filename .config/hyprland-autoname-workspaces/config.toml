@@ -17,10 +17,9 @@ version = "1.1.13"
 # workspace_empty = "{id}" # {id}, {delim} and {clients} are supported
 # client formatter
 client = "{icon}"
-client_active = "<span foreground='#ff4040'>{icon}</span>"
-
-# deduplicate client formatter
+client_active = "<span color='#ff4040'>{icon}</span>"
 # client_fullscreen = "[{icon}]"
+# deduplicate client formatter
 # client_dup = "{client}{counter_sup}"
 # client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused}"
 # client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused}"
@@ -29,6 +28,7 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 # Add your icons mapping
 # use double quote the key and the value
 # take class name from 'hyprctl clients'
+DEFAULT = ""
 "discord" = ""
 "io.gpt4all.gpt4all-chat" = "" 
 "steam_app_1817070" = "󱇪"
@@ -63,6 +63,7 @@ client_active = "<span foreground='#ff4040'>{icon}</span>"
 "Code" = ""
 "code-oss" = ""
 "Spotify" = ""
+"spotify" = ""
 "Alacritty" = ""
 "foot" = ""
 "org.telegram.desktop" = ""
