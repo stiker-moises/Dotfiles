@@ -17,9 +17,10 @@
 	"modules-right": [
 		"sway/window",
 		"hyprland/window",
-		"network",
+		"group/network",
 		"battery",
 		"group/audio",
+		"pulseaudio#source",
 		"privacy",
 		"group/misc",
 		"tray"
@@ -89,9 +90,16 @@
 		}
 	},
 	"network": {
-		"format-wifi": "{essid}  ",
+		"format-wifi": "",
 		"format-ethernet": "",
 		"format-disconnected": "",
+		"tooltip-format-wifi": "Strength: {signalStrength}%",
+		"on-click": "iwgtk",
+	},
+	"network#ssid": {
+		"format-wifi": "{essid}",
+		"format-ethernet": "",
+		"format-disconnected": "",
 		"tooltip-format-wifi": "Strength: {signalStrength}%",
 		"on-click": "iwgtk",
 		"max-length": "50"
@@ -207,7 +215,17 @@
 		"modules": [ 
 			"pulseaudio#sink",
 			"pulseaudio/slider",
-			"pulseaudio#source"
+		],
+		"drawer": {
+			"transition-duration": 500,
+			"transition-left-to-right": false,
+		},
+	},
+		"group/audio": {
+		"orientation": "horizontal",
+		"modules": [ 
+			"network",
+			"network#ssid",
 		],
 		"drawer": {
 			"transition-duration": 500,
