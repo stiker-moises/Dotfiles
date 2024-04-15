@@ -221,7 +221,7 @@
 			"transition-left-to-right": false,
 		},
 	},
-		"group/audio": {
+	"group/network": {
 		"orientation": "horizontal",
 		"modules": [ 
 			"network",
