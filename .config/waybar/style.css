@@ -2,7 +2,6 @@
 	font-family: "Noto Sans Medium", "Font Awesome 6 Free Solid:style=Solid";
 }
 
-#custom-mako:hover,
 #custom-mako.do-not-disturb,
 #clock.2:hover,
 #workspaces button.focused,
@@ -73,6 +72,7 @@ window#waybar {
 
 #workspaces button,
 #custom-mako,
+#custom-mako.do-not-disturb,
 #workspaces button.urgent,
 #idle_inhibitor.deactivated,
 #workspaces button.focused,
@@ -88,6 +88,8 @@ window#waybar {
 #pulseaudio:hover,
 #idle_inhibitor.deactivated:hover,
 #idle_inhibitor.activated,
+#custom-mako.do-not-disturb:hover,
+#custom-mako:hover,
 #battery:hover {
 	opacity: 1;
 }
@@ -97,7 +99,9 @@ window#waybar {
 #window {
 	color: #e0e0e0;
 }
-
+#window {
+	color: #e0e0e0;
+}
 #clock,
 #pulseaudio,
 #idle_inhibitor,
