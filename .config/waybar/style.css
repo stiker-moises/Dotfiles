@@ -6,7 +6,6 @@
 #clock.2:hover,
 #workspaces button.focused,
 #pulseaudio:hover,
-#idle_inhibitor.deactivated:hover,
 #idle_inhibitor.activated,
 #battery:hover,
 #pulseaudio,
@@ -74,7 +73,7 @@ window#waybar {
 #custom-mako,
 #custom-mako.do-not-disturb,
 #workspaces button.urgent,
-#idle_inhibitor.deactivated,
+#idle_inhibitor,
 #workspaces button.focused,
 #pulseaudio,
 #battery,
@@ -83,11 +82,9 @@ window#waybar {
 }
 
 #workspaces button.focused:hover,
-#idle_inhibitor.deactivated,
 #workspaces button.urgent:hover,
 #pulseaudio:hover,
-#idle_inhibitor.deactivated:hover,
-#idle_inhibitor.activated,
+#idle_inhibitor:hover,
 #custom-mako.do-not-disturb:hover,
 #custom-mako:hover,
 #battery:hover {
