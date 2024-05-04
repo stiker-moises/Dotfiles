@@ -207,7 +207,7 @@
 		"format-source-muted": "",
 		"tooltip": false,
 		"on-click": "pkill pavucontrol ; pavucontrol",
-		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sed '/easyeffects_sink/d' | sed \"/$(pactl get-default-sink)/d\" | tofi --prompt-text \" \" --height 118 --width 480 --anchor bottom-right --margin-right 80 --margin-bottom 50 --auto-accept-single true )",
+		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sd 'easyeffects_sink\n' '' | sd \"$(pactl get-default-sink)\n\" '' | tofi --prompt-text \" \" --height 118 --width 480 --auto-accept-single true ) && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga",
 		"on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     },
 	"group/audio": {
