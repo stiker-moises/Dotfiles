@@ -39,6 +39,7 @@ unsetopt ALL_EXPORT
 ### Set alias
 #############
 alias ll='eza -al'
+alias jq='jaq'
 alias upd='echo "Safe updates can be accomplished with supd" &! paru -Syu --noconfirm && notify-send --urgency=low "UNSAFE Update completed" && pw-play --volume=0.2 "/usr/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias supd='paru -Syu --confirm --review && notify-send --urgency=low "Safe Update completed" && pw-play --volume=0.2 "/usr/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias updd='doas reflector --protocol https --threads 4 --latest 20 --sort rate --save /etc/pacman.d/mirrorlist && notify-send --urgency=low "Mirrorlists updated" && paru -Syu --noconfirm && notify-send --urgency=low "Update completed" && pw-play --volume=0.2 "/usr/share/sounds/freedesktop/stereo/complete.oga" &!'
