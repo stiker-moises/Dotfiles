@@ -51,6 +51,7 @@
 		"show-special": true,
 		"format": "{name}",
 		"smooth-scrolling-threshold": "4",
+		"on-click": "activate && hyprctl monitors -j | jaq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sd 'special:' '' | xargs -I [] hyprctl dispatch togglespecialworkspace []",
 		"format-icons": {
 			"1": "1",
 			"2": "2",
@@ -107,6 +108,7 @@
 	"pulseaudio#sink": {
 		"format": "{volume} {icon}",
 		"format-bluetooth": "{volume} {icon}",
+		"tooltip": false,
 		"format-muted": "{volume} 󰝟",
 		"format-icons": {
 			"headphone": "󰋋",
@@ -210,11 +212,19 @@
 		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sd 'easyeffects_sink\n' '' | sd \"$(pactl get-default-sink)\n\" '' | tofi --prompt-text \" \" --height 118 --width 480 --auto-accept-single true ) && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga",
 		"on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     },
+	"pulseaudio#name": {
+		"format": "{desc}",
+		"tooltip": false,
+		"on-click": "pkill pavucontrol ; pavucontrol",
+		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sd 'easyeffects_sink\n' '' | sd \"$(pactl get-default-sink)\n\" '' | tofi --prompt-text \" \" --height 118 --width 480 --auto-accept-single true ) && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga",
+		"on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    },
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
 			"pulseaudio#sink",
-			"pulseaudio/slider",
+			"pulseaudio#name",
+			"pulseaudio/slider"
 		],
 		"drawer": {
 			"transition-duration": 500,
