@@ -51,6 +51,7 @@ window#waybar {
 
 #pulseaudio.sink.muted,
 #pulseaudio.source.source-muted,
+#pulseaudio.name.muted,
 #clock {
 	color: #b0b0b0;
 }
@@ -93,9 +94,7 @@ window#waybar {
 
 #workspaces button.urgent:hover,
 #workspaces button.urgent,
-#window {
-	color: #e0e0e0;
-}
+#pulseaudio.name,
 #window {
 	color: #e0e0e0;
 }
