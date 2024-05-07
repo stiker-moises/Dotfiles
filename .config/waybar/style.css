@@ -78,6 +78,7 @@ window#waybar {
 #workspaces button.focused,
 #pulseaudio,
 #battery,
+#tray > .active,
 #workspaces button:hover {
 	opacity: 0.8;
 }
@@ -88,7 +89,8 @@ window#waybar {
 #idle_inhibitor:hover,
 #custom-mako.do-not-disturb:hover,
 #custom-mako:hover,
-#battery:hover {
+#battery:hover,
+#tray > .active:hover {
 	opacity: 1;
 }
 
@@ -152,7 +154,6 @@ battery.critical {
 	margin-left: 5px;
 }
 
-#battery.full,
 #network.ethernet,
 window#waybar.empty #window {
 	margin: 0px 0px 0px 0px;
