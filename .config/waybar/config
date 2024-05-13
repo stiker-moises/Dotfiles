@@ -103,7 +103,7 @@
 		"format-disconnected": "",
 		"tooltip-format-wifi": "Strength: {signalStrength}%",
 		"on-click": "iwgtk",
-		"max-length": "50"
+		"max-length": 50
 	},
 	"pulseaudio#sink": {
 		"format": "{volume} {icon}",
@@ -214,6 +214,7 @@
     },
 	"pulseaudio#name": {
 		"format": "{desc}",
+		"max-length": 38,
 		"tooltip": false,
 		"on-click-middle": "pkill pavucontrol ; pavucontrol",
 		"on-click": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sd 'easyeffects_sink\n' '' | sd \"$(pactl get-default-sink)\n\" '' | tofi --prompt-text \" \" --height 118 --width 480 --auto-accept-single true ) && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga",
