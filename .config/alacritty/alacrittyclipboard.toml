@@ -1,0 +1,20 @@
+[cursor.style]
+blinking = "off"
+
+[debug]
+log_level = "off"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 0
+
+[[keyboard.bindings]]
+action = "None"
+key = "C"
+mods = "Control"
+
+[window]
+dynamic_padding = false
+opacity = 1
