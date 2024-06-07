@@ -111,6 +111,7 @@
 		"format-muted": "{volume} 󰝟",
 		"format-icons": {
 			"headphone": "󰋋",
+			"hdmi": "",
 			"hands-free": "󱡏",
 			"headset": "󰋎",
 			"phone": "",
