@@ -5,10 +5,9 @@
 #custom-mako.do-not-disturb,
 #clock.2:hover,
 #workspaces button.focused,
-#pulseaudio:hover,
 #idle_inhibitor.activated,
-#battery:hover,
 #pulseaudio,
+#wireplumber,
 #battery,
 #workspaces button.visible,
 #workspaces button:hover {
@@ -45,11 +44,13 @@ window#waybar {
 #mode,
 #submap,
 #pulseaudio,
+#wireplumber,
 #window {
 	background: #000;
 }
 
 #pulseaudio.sink.muted,
+#wireplumber.muted,
 #pulseaudio.source.source-muted,
 #pulseaudio.name.muted,
 #clock {
@@ -77,6 +78,7 @@ window#waybar {
 #idle_inhibitor,
 #workspaces button.focused,
 #pulseaudio,
+#wireplumber,
 #battery,
 #tray > .active,
 #workspaces button:hover {
@@ -86,6 +88,7 @@ window#waybar {
 #workspaces button.focused:hover,
 #workspaces button.urgent:hover,
 #pulseaudio:hover,
+#wireplumber:hover,
 #idle_inhibitor:hover,
 #custom-mako.do-not-disturb:hover,
 #custom-mako:hover,
@@ -102,6 +105,7 @@ window#waybar {
 }
 #clock,
 #pulseaudio,
+#wireplumber,
 #idle_inhibitor,
 #battery,
 tooltip,
@@ -146,6 +150,7 @@ battery.critical {
 #window,
 #custom-mako,
 #pulseaudio,
+#wireplumber,
 #idle_inhibitor {
 	padding: 0px 5px 0px 5px;
 	margin-left: 5px;
