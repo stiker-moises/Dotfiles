@@ -119,7 +119,7 @@
 			"car": "",
 			"default": ["󰖀", "󰕾"]
 		},
-//		"ignored-sinks": ["Easy Effects Sink"],
+		"ignored-sinks": ["Easy Effects Sink"],
 		"smooth-scrolling-threshold": "4",
 		"scroll-step": "5",
 		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sd 'easyeffects_sink\n' '' | sd \"$(pactl get-default-sink)\n\" '' | tofi --prompt-text \" \" --height 40% --width 40% --auto-accept-single true ) && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga",
@@ -128,6 +128,31 @@
 		"on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+ -l 2.0",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%- -l 2.0"
 	},
+	"wireplumber": {
+		"format": "{volume} {icon}",
+		"format-bluetooth": "{volume} {icon}",
+		"tooltip": true,
+		"format-muted": "{volume} 󰝟",
+		"format-icons": {
+			"headphone": "󰋋",
+			"hdmi": "",
+			"hands-free": "󱡏",
+			"headset": "󰋎",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["󰖀", "󰕾"]
+		},
+		"ignored-sinks": ["Easy Effects Sink"],
+		"smooth-scrolling-threshold": "4",
+		"scroll-step": "5",
+		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sd 'easyeffects_sink\n' '' | sd \"$(pactl get-default-sink)\n\" '' | tofi --prompt-text \" \" --height 40% --width 40% --auto-accept-single true ) && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga",
+		"on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle",
+		"on-click": "pkill pavucontrol ; pavucontrol",
+		"on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+ -l 2.0",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%- -l 2.0"
+	},
+
 	"pulseaudio/slider": {
 		"min": 0,
 		"max": 100,
@@ -223,7 +248,7 @@
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
-			"pulseaudio#sink",
+			"wireplumber",
 //			"pulseaudio#name",
 			"pulseaudio/slider"
 		],
