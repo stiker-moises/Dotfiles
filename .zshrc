@@ -175,6 +175,6 @@ HISTSIZE=1024
 SAVEHIST=4096
 setopt autocd extendedglob
 unsetopt beep nomatch
-zstyle :compinstall filename '~/.config/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
