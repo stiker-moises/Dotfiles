@@ -196,7 +196,7 @@
 		"interval": "once",
 		"return-type": "json",
 		"format": "{}{icon}",
-		"on-click": "makoctl mode | rg 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb ; pkill -RTMIN+11 waybar",
+		"on-click": "makoctl mode | rg -q 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb ; pkill -RTMIN+11 waybar",
 		"exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\",\"class\":\"%s\"}' $(makoctl mode | rg -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1) $(makoctl mode | tail -1)",
 		"signal": 11,
 		"on-scroll-up": "makoctl restore",
