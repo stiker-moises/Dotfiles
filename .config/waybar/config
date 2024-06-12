@@ -247,8 +247,9 @@
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
-			"wireplumber",
+//			"wireplumber",
 //			"pulseaudio#name",
+			"pulseaudio#sink",
 			"pulseaudio/slider"
 		],
 		"drawer": {
