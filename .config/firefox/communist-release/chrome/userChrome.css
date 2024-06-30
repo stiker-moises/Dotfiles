@@ -9,8 +9,40 @@
 	--tab-min-height: 22px !important;
 	--toolbarbutton-border-radius: 1px !important;
 	--toolbar-bgcolor: #000000 !important;
+	--in-content-primary-button-background: #c00 !important;
+	--in-content-primary-button-text-color: #fff !important;
+	--in-content-page-background: #000 !important;
+	--in-content-primary-button-background-hover: #ff4040 !important;
+	--in-content-primary-button-background-active: #ff4040 !important;
+	--in-content-page-color: #e0e0e0 !important;
+    --in-content-box-background-odd: #000 !important;
+    --in-content-box-info-background: #000 !important;
+    --in-content-border-color: #000 !important;
+    --in-content-border-hover: #000 !important;
+    --in-content-border-invalid: rgb(255,132,139) !important;
+    --in-content-warning-icon-color: #ffbd4f !important;
+    --in-content-success-icon-color: #54FFBD !important;
+    --in-content-icon-color: rgb(251,251,254) !important;
+    --in-content-primary-button-text-color: #fff !important;
+    --in-content-danger-button-background: #cc0 !important;
+    --in-content-danger-button-background-hover: #ffff40 !important;
+    --in-content-danger-button-background-active: #ffff40 !important;
+    --in-content-table-background: #000 !important;
+    --card-outline-color: #000 !important;
+    --dialog-warning-text-color: #000 !important;
+	--background-color-canvas: #000 !important;
+	--color-accent-primary: #c00 !important;
+    --color-accent-primary-hover: #ff4040 !important;
+    --color-accent-primary-active: #ff4040 !important;
+	--toolbarbutton-checked-background: #cc0000 !important;
+	--theme-selection-background: #cc0000 !important;
 }
-
+[message-bar-type="infobar"]:first-of-type {
+  padding-top: 32px !important;
+}
+.infobar {
+  --info-bar-background-color: black !important;
+}
 /* Hide BS */
 #alltabs-button, .arrowscrollbox-overflow-start-indicator, .arrowscrollbox-overflow-end-indicator, .tab-close-button, .scrollbutton-up, .scrollbutton-down, .tabbrowser-tab::after, .tabbrowser-tab::before, #TabsToolbar .tabbrowser-tab[selected] .tab-line, #webrtcIndicator {
 	display: none !important;
@@ -24,7 +56,7 @@
 	fill: #cc0000 !important
 }
 /* Set the active tab background */
-.tab-background[selected="true"] {
+.tab-background[selected] {
 	background-color: #800000!important;
 	opacity: 1
 }
@@ -56,6 +88,9 @@
     transition-delay: 0s;
     opacity: 1;
 }
+@media (prefers-color-scheme: dark) {
+
+}
 /* Needed for for FF 75 megabar */
 #urlbar {
 	--urlbar-toolbar-height: 32px !important;
@@ -78,6 +113,7 @@
 /* Compatibility with auto-hide.css */
 :root[uidensity=compact] #navigator-toolbox {
 	--nav-bar-height: 31px !important;
+	border-bottom: 0px solid transparent!important;
 }
 /* tab height*/
 .tabbrowser-tab {
