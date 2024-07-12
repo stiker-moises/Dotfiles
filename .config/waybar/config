@@ -172,8 +172,8 @@
 	"battery#icon": {
 		"interval": 10,
 		"states": {
-			"warning": 15,
-			"critical": 8
+			"warning": 30,
+			"critical": 5
 		},
 		"format": "{capacity}% {icon}",
 		"format-charging": "{capacity}% {icon}󱐋",
@@ -186,8 +186,8 @@
 	"battery#time": {
 		"interval": 5,
 		"states": {
-			"warning": 15,
-			"critical": 8
+			"warning": 30,
+			"critical": 5
 		},
 		"format": "{time}",
 		"format-charging": "{time}",
