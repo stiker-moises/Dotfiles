@@ -27,7 +27,6 @@
 #pulseaudio-slider,
 window#waybar #window,
 #privacy-item.audio-in,
-#idle_inhibitor,
 #privacy-item.screenshare {
 	background-color: rgba(0, 0, 0, .8);
 }
@@ -45,6 +44,7 @@ window#waybar {
 #submap,
 #pulseaudio,
 #wireplumber,
+#idle_inhibitor,
 #window {
 	background: #000;
 }
@@ -79,6 +79,7 @@ window#waybar {
 #workspaces button.focused,
 #pulseaudio,
 #wireplumber,
+#network.wifi,
 #battery,
 #tray > .active,
 #workspaces button:hover {
@@ -92,6 +93,7 @@ window#waybar {
 #idle_inhibitor:hover,
 #custom-mako.do-not-disturb:hover,
 #custom-mako:hover,
+#network.wifi:hover,
 #battery:hover,
 #tray > .active:hover {
 	opacity: 1;
