@@ -1,5 +1,5 @@
 bat_name: BAT1
-tick_rate: 1
+tick_rate: 5
 critical_level: 5
 low_level: 30
 critical:
