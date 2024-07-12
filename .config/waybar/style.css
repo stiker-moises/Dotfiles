@@ -7,7 +7,7 @@
 #idle_inhibitor.activated,
 #pulseaudio,
 #wireplumber,
-#battery,
+#battery.icon,
 #workspaces button.visible,
 #workspaces button:hover {
 	color: @theme_selected_bg_color;
@@ -104,6 +104,7 @@ window#waybar {
 #workspaces button.urgent:hover,
 #workspaces button.urgent,
 #pulseaudio.name,
+#battery.time,
 #window {
 	color: #e0e0e0;
 }
@@ -130,12 +131,12 @@ window#waybar {
 	margin-left: 5px;
 }
 
-#battery.warning,
+#battery.icon.warning,
 #network.disconnected {
 	color: @warning_color;
 }
 
-#battery.critical {
+#battery.icon.critical {
 	color: #f0f;
 }
 
@@ -143,11 +144,12 @@ window#waybar {
 #mode,
 #submap,
 #network.wifi,
+#battery.time,
 #network.disconnected {
 	padding: 0px 5px 0px 5px;
 	margin: 0px 5px 0px 5px;
 }
-#battery {
+#battery.icon {
 	padding: 0px 5px 0px 5px;
 }
 
