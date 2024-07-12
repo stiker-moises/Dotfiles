@@ -53,11 +53,11 @@ window#waybar {
 #wireplumber.muted,
 #pulseaudio.source.source-muted,
 #pulseaudio.name.muted,
+#network.wifi,
 #clock {
 	color: #b0b0b0;
 }
 
-#network.wifi,
 #idle_inhibitor.deactivated,
 #custom-mako {
 	color: #909090;
