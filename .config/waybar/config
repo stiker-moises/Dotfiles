@@ -17,7 +17,7 @@
 		"sway/window",
 		"hyprland/window",
 		"group/network",
-		"battery",
+		"group/battery",
 		"group/audio",
 		"pulseaudio#source",
 		"privacy",
@@ -169,13 +169,31 @@
 	"tray": {
 		"spacing": 10
 	},
-	"battery": {
-		"interval": 60,
+	"battery#icon": {
+		"interval": 10,
 		"states": {
 			"warning": 15,
 			"critical": 8
 		},
 		"format": "{capacity}% {icon}",
+		"format-charging": "{capacity}% {icon}󱐋",
+		"format-full": "󱐋  Charged",
+		"tooltip":false,
+		"format-icons": ["", "", "", "", ""],
+		"max-length": 25,
+		"on-click": "gnome-power-statistics"
+	},
+	"battery#time": {
+		"interval": 5,
+		"states": {
+			"warning": 15,
+			"critical": 8
+		},
+		"format": "{time}",
+		"format-charging": "{time}",
+		"format-time": "{H} h {M} min",
+		"tooltip":false,
+		"format-full": "",
 		"format-icons": ["", "", "", "", ""],
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
@@ -261,6 +279,17 @@
 		"modules": [ 
 			"network",
 			"network#ssid",
+		],
+		"drawer": {
+			"transition-duration": 500,
+			"transition-left-to-right": false,
+		},
+	},
+	"group/battery": {
+		"orientation": "horizontal",
+		"modules": [ 
+			"battery#icon",
+			"battery#time",
 		],
 		"drawer": {
 			"transition-duration": 500,
