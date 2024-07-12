@@ -93,14 +93,14 @@
 		"format-wifi": "",
 		"format-ethernet": "",
 		"format-disconnected": "",
-		"tooltip-format-wifi": "Strength: {signalStrength}%",
+		"tooltip": false,
 		"on-click": "iwgtk",
 	},
 	"network#ssid": {
-		"format-wifi": "{essid}",
+		"format-wifi": "{signalStrength}% {essid}",
 		"format-ethernet": "",
 		"format-disconnected": "",
-		"tooltip-format-wifi": "Strength: {signalStrength}%",
+		"tooltip": false,
 		"on-click": "iwgtk",
 		"max-length": 50
 	},
@@ -175,7 +175,7 @@
 			"warning": 15,
 			"critical": 8
 		},
-		"format": "{icon} {capacity}%",
+		"format": "{capacity}% {icon}",
 		"format-icons": ["", "", "", "", ""],
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
