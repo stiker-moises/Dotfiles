@@ -1,211 +1,193 @@
-[format]
-# Deduplicate icons if enable.
-# A superscripted counter will be added.
-# dedup = false
-# dedup_inactive_fullscreen = false # dedup more
-# window delimiter
-# delim = " "
-# max_clients = 30 # you should not need this
-
-# available formatter:
-# {counter_sup} - superscripted count of clients on the workspace, and simple {counter}, {delim}
-# {icon}, {client}
-# workspace formatter
-# workspace = "{id}:{delim}{clients}" # {id}, {delim} and {clients} are supported
-# workspace_empty = "{id}" # {id}, {delim} and {clients} are supported
-# client formatter
-client = "{icon}"
-client_active = "<span color='#ff4040'>{icon}</span>"
-# client_fullscreen = "[{icon}]"
-# deduplicate client formatter
-# client_dup = "{client}{counter_sup}"
-# client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused}"
-# client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused}"
+version = "1.1.14"
 
 [class]
-# Add your icons mapping
-# use double quote the key and the value
-# take class name from 'hyprctl clients'
-DEFAULT = ""
-"discord" = ""
-"io.gpt4all.gpt4all-chat" = "" 
-"chatall" = "" 
-"steam_app_1817070" = "󱇪"
-"steam_app_1817190" = "󱇪"
-"steam_app_783770" = "󰜃"
-"steam_app_714010" = "󰜃"
-"steam_app_2281730" = "󰜃"
-"CombatMaster.x86_64" = "󰜃"
-"steam_app_1266700" = "󰢚"
-"steam_app_1872550" = "󰢚"
-"steam_app_803330" = "󰢚"
-"steam_app_246620" = ""
-"steam_app_1623730" = "󰐝"
-"FTL.amd64" = ""
-"lmirtechconsole.exe" = ""
-"qtalarm" = "󰀠"
-"Anydesk" = ""
-"org.twosheds.iwgtk" = ""
-"at.yrlf.wl_mirror" = ""
-"steam" = ""
-"Steam" = ""
-"steamwebhelper" = ""
-"vlc" = "󰕼"
-"org.qbittorrent.qBittorrent" = "󱑤"
-"deluge" = "󱑤"
-"Thunderbird" = "󰇮"
-"thunderbird" = "󰇮"
-"Postman" = "󰇮"
-"Insomnia" = ""
-"Bitwarden" = ""
-"Slack" = "󰒱"
-"Code" = ""
-"code-oss" = ""
-"Spotify" = ""
-"spotify" = ""
-"Alacritty" = ""
-"alacrittyclipboard" = ""
-"foot" = ""
-"org.telegram.desktop" = ""
-"telegramdesktop" = ""
-"Telegram" = ""
-"Wfica" = ""
+Spotify = ""
+rpcs4 = "︁"
+steam_app_2281730 = "󰜃"
+Steam = ""
+Code = ""
 "waydroid.com.citrix.Receiver" = ""
-"org.remmina.Remmina" = ""
-"SchildiChat" = ""
-"Element" = ""
-"nheko" = ""
-"FreeTube" = ""
-"yakyak" = "󰋉"
-"copyq" = "󰅇"
-"Microsoft Teams - Preview" = "󰊻"
-"Microsoft Teams - Insiders" = "󰊻"
-"teams-for-linux" = "󰊻"
-"clonehero" = "󰋄"
-"YARG" = "󰋄"
-"org.kde.dolphin" = "󰉋"
-"pcmanfm-qt" = "󰉋"
-"pcmanfm-gtk4" = "󰉋"
+gucharmap = ""
+wdisplays = ""
+"FTL.amd64" = ""
+"io.gpt4all.gpt4all-chat" = ""
+Nightly = ""
+Google-chrome = ""
+steam_app_783770 = "󰜃"
+spotify = ""
+image-roll = ""
+zim = "󰏪"
+discord = ""
 "org.kde.ark" = ""
-"firefox" = ""
-"Nightly" = ""
-"firefoxdeveloperedition" = ""
-"Google-chrome" = ""
-"Chromium" = ""
-"Chromium-browser" = ""
-"org.kde.kcharselect" = ""
-"gucharmap" = ""
-"Zim" = "󰏪"
-"zim" = "󰏪"
-"image-roll" = ""
+clonehero = "󰋄"
+Anydesk = ""
+Gimp = ""
+galculator = "󰃬"
+alacrittyclipboard = ""
+Zim = "󰏪"
+thunderbird = "󰇮"
+Bitwarden = ""
+pavucontrol = ""
+Wfica = ""
+"org.twosheds.iwgtk" = ""
 "com.github.weclaw2.ImageRoll" = ""
-"pavucontrol" = ""
-"obs" = "󰻂"
+Postman = "󰇮"
+firefoxdeveloperedition = ""
+"at.yrlf.wl_mirror" = ""
 "com.obsproject.Studio" = "󰻂"
-"galculator" = "󰃬"
-"mpv" = ""
-"mpvrainsounds" = ""
-"yuzu" = "︁"
-"rpcs4" = "︁"
-"blueberry.py" = "󰂯"
 "com.github.wwmm.easyeffects" = ""
-"citra" = "︁"
-"Cemu" = "︁"
-"wdisplays" = ""
-"Pinta" = "󰃣"
-"pinta" = "󰃣"
-"dolphin-emu" = "︁"
-"GParted" = "󰋊"
+Cemu = "︁"
 "/GParted/" = "󰋊"
-"stoken-gui" = "󰌆"
-"polkit-gnome-authentication-agent0" = ""
-"gcr-prompter" = ""
+nheko = ""
+Slack = "󰒱"
+audacity = ""
+"blueberry.py" = "󰂯"
+chromium = ""
+steam_app_1266700 = "󰢚"
+telegramdesktop = ""
+steam_app_714010 = "󰜃"
+yuzu = "︁"
+XEyes = "󰈈"
+SchildiChat = ""
+"Microsoft Teams - Insiders" = "󰊻"
+steamwebhelper = ""
+Element = ""
+steam_app_246620 = ""
+"org.kde.dolphin" = "󰉋"
+pcmanfm-qt = "󰉋"
+Chromium = ""
+Chromium-browser = ""
 "org.inkscape.Inkscape" = ""
-"audacity" = ""
-"anki" = ""
-"org.qutebrowser.qutebrowser" = ""
-"whatsapp-for-linux" = ""
 "Ardour-5.9.0" = ""
-"Gimp" = ""
+stoken-gui = "󰌆"
+Thunderbird = "󰇮"
+foot = ""
+"org.kde.kcharselect" = ""
+citra = "︁"
+steam_app_803330 = "󰢚"
+dolphin-emu = "︁"
+GParted = "󰋊"
+"org.qutebrowser.qutebrowser" = ""
 "/pdf/" = ""
-"/exe/" = "󰡶"
-"chromium" = ""
-"XEyes" = "󰈈"
-"org.kde.ksysguard" = ""
+"CombatMaster.x86_64" = "󰜃"
+Alacritty = ""
+steam_app_1872550 = "󰢚"
+DEFAULT = ""
+pinta = "󰃣"
+deluge = "󱑤"
+copyq = "󰅇"
+"org.telegram.desktop" = ""
+gcr-prompter = ""
 "net.nokyan.Resources" = ""
-"gnome-power-statistics" = ""
+Telegram = ""
+obs = "󰻂"
+YARG = "󰋄"
+"lmirtechconsole.exe" = ""
+qtalarm = "󰀠"
+steam = ""
+firefox = ""
+FreeTube = ""
+Pinta = "󰃣"
+polkit-gnome-authentication-agent0 = ""
+Insomnia = ""
+"org.qbittorrent.qBittorrent" = "󱑤"
+code-oss = ""
+steam_app_1817070 = "󱇪"
+"org.remmina.Remmina" = ""
+pcmanfm-gtk4 = "󰉋"
+mpv = ""
+anki = ""
+mpvrainsounds = ""
+whatsapp-for-linux = ""
+vlc = "󰕼"
+"org.kde.ksysguard" = ""
+"Microsoft Teams - Preview" = "󰊻"
+gnome-power-statistics = ""
+chatall = ""
+"/exe/" = "󰡶"
+steam_app_1623730 = "󰐝"
+yakyak = "󰋉"
+steam_app_1817190 = "󱇪"
+teams-for-linux = "󰊻"
 
-# [initial_class]
-# "DEFAULT" = " {class}: {title}"
-# "(?i)Kitty" = "term"
+[class_active]
 
-# [initial_class_active]
-# "(?i)Kitty" = "*TERM*"
+[initial_class]
 
-[title_in_class."chromium"]
-"(.*)INC. - Dashboard > Home - Chromium" = ""
-"(?i)MAX.*Chromium" = ""
-"(?i)Dashboards -.*Chromium" = ""
-"(.*) - YouTube.*Chromium" = ""
-"(?i)Github" = ""
-"/Google/" = ""
-# regex captures support is supported
-
-[title_in_class."firefox"]
-".*Twitter — Mozilla Firefox" = ""
-"(?i)Google Drive.*Firefox" = ""
-"(?i)Google Calendar.*Firefox" = ""
-".*nitter — Mozilla Firefox" = ""
-"(?i)reddit.*Firefox" = ""
-"(?i)drive.*Firefox" = ""
-"(?i)Google Play.*Firefox" = ""
-" - YouTube — Mozilla Firefox" = ""
-"Firefox .*Private Browsing" = "󰈉"
-"(?i)Github" = ""
-"/Google/" = ""
-
-[title_in_class."Alacritty"]
-"(.*) - NVIM" = "󱩼"
-
-[title_in_class."pcmanfm-qt"]
-"Preferences" = ""
-# [title_in_initial_class."(?i)kitty"]
-# "(?i)neomutt" = "neomutt"
-
-# [initial_title_in_class."(?i)kitty"]
-# "(?i)neomutt" = "neomutt"
-
-# [initial_title_in_initial_class."(?i)kitty"]
-# "(?i)neomutt" = "neomutt"
-
-# [initial_title."(?i)kitty"]
-# "zsh" = "Zsh"
-
-# [initial_title_active."(?i)kitty"]
-# "zsh" = "*Zsh*"
-
-# Add your applications that need to be exclude
-# The key is the class, the value is the title.
-# You can put an empty title to exclude based on
-# class name only, "" make the job.
-[exclude]
-"" = "^$" # prevent displaying icon for empty class
-"(?i)fcitx" = ".*" # will match all title for fcitx
-"(?i)TestApp" = "" # will match all title for TestApp
-aProgram = "^$" # will match null title for aProgram
-"[Ss]team" = "^(Friends List.*)?$" # will match Steam friends list plus all popups (empty titles)
+[initial_class_active]
 
 [workspaces_name]
-0 = "0"
-1 = "1"
+10 = "ten"
 2 = "2"
-3 = "three"
 4 = "four"
+1 = "1"
+0 = "0"
+3 = "three"
 5 = "five"
 6 = "six"
 7 = "seven"
 8 = "eight"
 9 = "nine"
-10 = "ten"
 scratchpad = "11"
 work = "12"
+
+[title_in_class.Alacritty]
+"(.*) - NVIM" = "󱩼"
+
+[title_in_class.chromium]
+"(?i)Github" = ""
+"(?i)Dashboards -.*Chromium" = ""
+"/Google/" = ""
+"(?i)MAX.*Chromium" = ""
+"(.*)INC. - Dashboard > Home - Chromium" = ""
+"(.*) - YouTube.*Chromium" = ""
+
+[title_in_class.firefox]
+"(?i)Google Calendar.*Firefox" = ""
+"(?i)Github" = ""
+" - YouTube — Mozilla Firefox" = ""
+"/Google/" = ""
+".*Twitter — Mozilla Firefox" = ""
+"(?i)Google Drive.*Firefox" = ""
+"(?i)Google Play.*Firefox" = ""
+"Firefox .*Private Browsing" = "󰈉"
+"(?i)reddit.*Firefox" = ""
+"(?i)drive.*Firefox" = ""
+".*nitter — Mozilla Firefox" = ""
+
+[title_in_class.pcmanfm-qt]
+Preferences = ""
+
+[title_in_class_active]
+
+[title_in_initial_class]
+
+[title_in_initial_class_active]
+
+[initial_title_in_class]
+
+[initial_title_in_class_active]
+
+[initial_title_in_initial_class]
+
+[initial_title_in_initial_class_active]
+
+[exclude]
+"(?i)TestApp" = ""
+"[Ss]team" = "^(Friends List.*)?$"
+"(?i)fcitx" = ".*"
+aProgram = "^$"
+"" = "^$"
+
+[format]
+dedup = false
+dedup_inactive_fullscreen = false
+delim = " "
+workspace = "{id}:{delim}{clients}"
+workspace_empty = "{id}"
+client = "{icon}"
+client_fullscreen = "[{icon}]"
+client_active = "<span color='#ff4040'>{icon}</span>"
+client_dup = "{icon}{counter_sup}"
+client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused_sup}"
+client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused_sup}"
