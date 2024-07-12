@@ -1,7 +1,6 @@
 #tray menu {
 	font-family: "Noto Sans Medium", "Font Awesome 6 Free Solid:style=Solid";
 }
-
 #custom-mako.do-not-disturb,
 #clock.2:hover,
 #workspaces button.focused,
@@ -47,6 +46,9 @@ window#waybar {
 #idle_inhibitor,
 #window {
 	background: #000;
+}
+#battery.icon.charging {
+	margin-right: -8px;
 }
 
 #pulseaudio.sink.muted,
@@ -128,13 +130,13 @@ window#waybar {
 	margin-left: 5px;
 }
 
-battery.warning,
+#battery.warning,
 #network.disconnected {
 	color: @warning_color;
 }
 
-battery.critical {
-	color: #f00;
+#battery.critical {
+	color: #f0f;
 }
 
 #clock,
@@ -223,3 +225,4 @@ window#waybar.empty #window {
 	padding-left: 3px;
 	padding-right: 5px;
 }
+
