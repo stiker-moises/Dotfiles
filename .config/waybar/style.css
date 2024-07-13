@@ -82,7 +82,8 @@ window#waybar {
 #pulseaudio,
 #wireplumber,
 #network.wifi,
-#battery,
+#battery.icon,
+#battery.time,
 #tray > .active,
 #workspaces button:hover {
 	opacity: 0.8;
@@ -131,7 +132,7 @@ window#waybar {
 	margin-left: 5px;
 }
 
-#battery.icon.warning,
+/*#battery.icon.warning,*/
 #network.disconnected {
 	color: @warning_color;
 }
