@@ -90,7 +90,19 @@
 		}
 	},
 	"network": {
-		"format-wifi": "",
+		"format-wifi": "{icon}",
+		"format-icons": [
+		"󰤯",
+		"<span color=\"#cc0000\">󰤟</span>",
+		"<span color=\"#d34800\">󰤟</span>",
+		"<span color=\"#d56e00\">󰤟</span>",
+		"<span color=\"#d58f00\">󰤟</span>",
+		"<span color=\"#d2ae00\">󰤟</span>",
+		"<span color=\"#cccc00\">󰤥</span>",
+		"<span color=\"#bdd600\">󰤥</span>",
+		"<span color=\"#a9e100\">󰤥</span>",
+		"<span color=\"#68f500\">󰤥</span>",
+		"<span color=\"#00ff00\">󰤨</span>" ],
 		"format-ethernet": "",
 		"format-disconnected": "",
 		"tooltip": false,
@@ -176,10 +188,14 @@
 			"critical": 5
 		},
 		"format": "{capacity}% {icon}",
-		"format-charging": "{capacity}% {icon}󱐋",
-		"format-full": "󱐋  Charged",
+		"format-plugged": "{icon}",
+		"format-charging": "{capacity}% {icon}",
 		"tooltip":false,
-		"format-icons": ["", "", "", "", ""],
+		"format-icons": {
+			"discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂" ],
+			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋" ],
+			"plugged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+		},
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
 	},
@@ -189,12 +205,13 @@
 			"warning": 30,
 			"critical": 5
 		},
+		"full-at": "99",
 		"format": "{time}",
 		"format-charging": "{time}",
-		"format-time": "{H} h {M} min",
+		"format-plugged": "",
+		"format-time": "{H}:{m}",
 		"tooltip":false,
 		"format-full": "",
-		"format-icons": ["", "", "", "", ""],
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
 	},
