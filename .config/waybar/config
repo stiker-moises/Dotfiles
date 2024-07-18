@@ -109,7 +109,7 @@
 		"on-click": "iwgtk",
 	},
 	"network#ssid": {
-		"format-wifi": "{signalStrength}% {essid}",
+		"format-wifi": "{essid} {signalStrength}",
 		"format-ethernet": "",
 		"format-disconnected": "",
 		"tooltip": false,
@@ -187,13 +187,13 @@
 			"warning": 30,
 			"critical": 5
 		},
-		"format": "{capacity}% {icon}",
+		"format": "{capacity} {icon}",
 		"format-plugged": "{icon}",
-		"format-charging": "{capacity}% {icon}",
+		"format-charging": "{capacity} {icon}",
 		"tooltip":false,
 		"format-icons": {
-			"discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂" ],
-			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋" ],
+			"discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" ],
 			"plugged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 		},
 		"max-length": 25,
@@ -202,12 +202,17 @@
 	"battery#time": {
 		"interval": 5,
 		"states": {
+			"100": 100,
+			"99": 99,
 			"warning": 30,
 			"critical": 5
 		},
-		"full-at": "99",
-		"format": "{time}",
-		"format-charging": "{time}",
+		"format": "",
+		"format-charging-100": "",
+		"format-charging-99": "{time}",
+		"format-discharging-99": "{time}",
+		"format-charging-warning": "{time}",
+		"format-charging-critical": "{time}",
 		"format-plugged": "",
 		"format-time": "{H}:{m}",
 		"tooltip":false,
@@ -232,12 +237,12 @@
 		"interval": "once",
 		"return-type": "json",
 		"format": "{}{icon}",
-		"on-click": "makoctl mode -t do-not-disturb ; pkill -RTMIN+11 waybar",
-		"exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\",\"class\":\"%s\"}' $(makoctl mode | rg -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1) $(makoctl mode | tail -1)",
+		"on-click-right": "makoctl mode -t do-not-disturb ; pkill -RTMIN+11 waybar",
+		"exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"%s\",\"class\":\"%s\"}' $(makoctl mode | rg -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1) $(makoctl mode | tail -1)",
 		"signal": 11,
 		"on-scroll-up": "makoctl restore",
 		"on-scroll-down": "makoctl dismiss",
-		"on-click-right": "makoctl dismiss -a",
+		"on-click": "makoctl restore",
 		"on-click-middle": "makoctl restore && makoctl restore && makoctl restore && makoctl restore && makoctl restore && makoctl restore"
 	},
 	"systemd-failed-units": {
@@ -265,10 +270,11 @@
 	},
 	"pulseaudio#source": {
 		"format": "{format_source}",
-		"format-source": "",
-		"format-source-muted": "",
+		"format-source": "󰍬",
+		"format-source-muted": "󰍭",
 		"tooltip": false,
 		"on-click": "pkill pavucontrol ; pavucontrol",
+		"on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle ; wpctl get-volume @DEFAULT_SOURCE@ | rg -q 'MUTED' && notify-send ' Mic Muted' -h string:x-canonical-private-synchronous:mic-state || notify-send --urgency=low ' Mic unmuted' -h string:x-canonical-private-synchronous:mic-state",
 		"on-click-middle": "wpctl set-default $(pw-cli i $(pactl list sinks | rg --fixed-strings -B 1 \"$(pactl list sinks | rg Description: | sd '	Description: ' '' | sd 'Easy Effects Sink' '' | sd --fixed-strings \"$(pactl list sinks | rg -A 1 \"Name: $(pactl get-default-sink)\" | rg Description: | sd '	Description: ' '')\" '' | rg '.' || echo \"$(pactl list sinks | rg -A 1 \"Name: $(pactl get-default-sink)\" | rg Description: | sd '	Description: ' '')\" | tofi --prompt-text \" \" --height 40% --width 40% --auto-accept-single true )\" | rg Name: | awk '{print $2}' ) | rg -oP 'id: \\K\\w+') && notify-send --urgency=low --icon=/usr/share/icons/Flat-Remix-Red-Dark/panel/audio-volume-high-symbolic.svg \"$(pactl list sinks | rg -A 1 \"Name: $(pactl get-default-sink)\" | rg Description: | sd '	Description: ' '')\" -h string:x-canonical-private-synchronous:sink-state && pw-play --volume=0.2 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga &!",
     },
 //	"pulseaudio#name": {
