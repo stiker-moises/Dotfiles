@@ -47,9 +47,6 @@ window#waybar {
 #window {
 	background: #000;
 }
-#battery.icon.charging {
-	margin-right: -8px;
-}
 
 #pulseaudio.sink.muted,
 #wireplumber.muted,
