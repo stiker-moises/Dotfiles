@@ -82,7 +82,7 @@
 		"tooltip": false
 	},
 	"idle_inhibitor": {
-		"format": "{icon}",
+		"format": "{icon:1}",
 		"tooltip": false,
 		"format-icons": {
 			"activated": "󰈈",
@@ -90,7 +90,7 @@
 		}
 	},
 	"network": {
-		"format-wifi": "{icon}",
+		"format-wifi": "{icon:1}",
 		"format-icons": {
 			"wifi": [
 				"󰤯",
@@ -111,7 +111,7 @@
 		"on-click": "iwgtk",
 	},
 	"network#ssid": {
-		"format-wifi": "{essid} {signalStrength}",
+		"format-wifi": "{essid} {signalStrength:3}",
 		"format-ethernet": "",
 		"format-disconnected": "",
 		"tooltip": false,
@@ -119,10 +119,10 @@
 		"max-length": 50
 	},
 	"pulseaudio#sink": {
-		"format": "{volume} {icon}",
-		"format-bluetooth": "{volume} {icon}",
+		"format": "{volume:3} {icon:1}",
+		"format-bluetooth": "{volume:3} {icon:1}",
 		"tooltip": true,
-		"format-muted": "{volume} 󰝟",
+		"format-muted": "{volume:3} 󰝟",
 		"format-icons": {
 			"headphone": "󰋋",
 			"hdmi": "",
@@ -143,10 +143,10 @@
 		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%- -l 2.0"
 	},
 	"wireplumber": {
-		"format": "{volume} {icon}",
-		"format-bluetooth": "{volume} {icon}",
+		"format": "{volume:3} {icon:1}",
+		"format-bluetooth": "{volume:3} {icon:1}",
 		"tooltip": true,
-		"format-muted": "{volume} 󰝟",
+		"format-muted": "{volume:3} 󰝟",
 		"format-icons": {
 			"headphone": "󰋋",
 			"hdmi": "",
@@ -189,9 +189,9 @@
 			"warning": 30,
 			"critical": 5
 		},
-		"format": "{capacity} {icon}",
+		"format": "{capacity:3} {icon:1}",
 		"format-plugged": "{icon}",
-		"format-charging": "{capacity} {icon}",
+		"format-charging": "{capacity:3} {icon:1}",
 		"tooltip":false,
 		"format-icons": {
 			"discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
@@ -238,7 +238,7 @@
 		},
 		"interval": "once",
 		"return-type": "json",
-		"format": "{}{icon}",
+		"format": "{}{icon:1}",
 		"on-click-right": "makoctl mode -t do-not-disturb ; pkill -RTMIN+11 waybar",
 		"exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"%s\",\"class\":\"%s\"}' $(makoctl mode | rg -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1) $(makoctl mode | tail -1)",
 		"signal": 11,
