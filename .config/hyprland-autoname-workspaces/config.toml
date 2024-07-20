@@ -185,7 +185,7 @@ dedup_inactive_fullscreen = false
 delim = " "
 workspace = "{id}:{delim}{clients}"
 workspace_empty = "{id}"
-client = "<span alpha='80%'>{icon}</span>"
+client = "<span alpha='70%'>{icon}</span>"
 client_fullscreen = "[{icon}]"
 client_active = "<span alpha='100%'>{icon}</span>"
 client_dup = "{icon}{counter_sup}"
