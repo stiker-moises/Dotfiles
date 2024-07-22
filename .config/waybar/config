@@ -89,7 +89,7 @@
 			"deactivated": "󰈉"
 		}
 	},
-	"network": {
+	"network#icon": {
 		"format-wifi": "{icon:1}",
 		"format-icons": {
 			"wifi": [
@@ -111,7 +111,7 @@
 		"on-click": "iwgtk",
 	},
 	"network#ssid": {
-		"format-wifi": "{essid} {signalStrength:3}",
+		"format-wifi": "{essid} {signalStrength:2}",
 		"format-ethernet": "",
 		"format-disconnected": "",
 		"tooltip": false,
@@ -119,10 +119,10 @@
 		"max-length": 50
 	},
 	"pulseaudio#sink": {
-		"format": "{volume:3} {icon:1}",
+		"format": "{volume:3} {icon:1} ",
 		"format-bluetooth": "{volume:3} {icon:1}",
 		"tooltip": true,
-		"format-muted": "{volume:3} 󰝟",
+		"format-muted": "{volume:3} {icon:1}",
 		"format-icons": {
 			"headphone": "󰋋",
 			"hdmi": "",
@@ -131,7 +131,8 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["󰖀", "󰕾"]
+			"default": ["󰖀", "󰕾"],
+			"default-muted": "󰝟"
 		},
 		"ignored-sinks": ["Easy Effects Sink"],
 		"smooth-scrolling-threshold": "4",
@@ -142,11 +143,11 @@
 		"on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+ -l 2.0",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%- -l 2.0"
 	},
-	"wireplumber": {
-		"format": "{volume:3} {icon:1}",
+	"wireplumber#icon": {
+		"format": "{volume:3} {icon:1} ",
 		"format-bluetooth": "{volume:3} {icon:1}",
 		"tooltip": true,
-		"format-muted": "{volume:3} 󰝟",
+		"format-muted": "{volume:3} {icon:1}",
 		"format-icons": {
 			"headphone": "󰋋",
 			"hdmi": "",
@@ -189,9 +190,9 @@
 			"warning": 30,
 			"critical": 5
 		},
-		"format": "{capacity:3} {icon:1}",
+		"format": "{capacity:2} {icon:1}",
 		"format-plugged": "{icon}",
-		"format-charging": "{capacity:3} {icon:1}",
+		"format-charging": "{capacity:2} {icon:1}",
 		"tooltip":false,
 		"format-icons": {
 			"discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
@@ -289,9 +290,9 @@
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
-			"wireplumber",
+//			"wireplumber#icon",
 //			"pulseaudio#name",
-//			"pulseaudio#sink",
+			"pulseaudio#sink",
 			"pulseaudio/slider"
 		],
 		"drawer": {
@@ -301,8 +302,8 @@
 	},
 	"group/network": {
 		"orientation": "horizontal",
-		"modules": [ 
-			"network",
+		"modules": [
+			"network#icon",
 			"network#ssid",
 		],
 		"drawer": {
