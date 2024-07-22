@@ -290,9 +290,9 @@
 	"group/audio": {
 		"orientation": "horizontal",
 		"modules": [ 
-//			"wireplumber#icon",
+			"wireplumber#icon",
+//			"pulseaudio#sink",
 //			"pulseaudio#name",
-			"pulseaudio#sink",
 			"pulseaudio/slider"
 		],
 		"drawer": {
