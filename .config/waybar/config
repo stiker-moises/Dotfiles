@@ -127,8 +127,8 @@
 		"format-icons": {
 			"headphone": "󰋋",
 			"headphone-muted": "󰟎",
-			"hdmi": "󰍹",
-			"hdmi-muted": "󰶐",
+			"hdmi": "󰔂",
+			"hdmi-muted": "󰠻",
 			"hands-free": "󱡏",
 			"hands-free-muted": "󱡐",
 			"headset": "󰋎",
@@ -160,8 +160,8 @@
 		"format-icons": {
 			"headphone": "󰋋",
 			"headphone-muted": "󰟎",
-			"hdmi": "󰍹",
-			"hdmi-muted": "󰶐",
+			"hdmi": "󰔂",
+			"hdmi-muted": "󰠻",
 			"hands-free": "󱡏",
 			"hands-free-muted": "󱡐",
 			"headset": "󰋎",
