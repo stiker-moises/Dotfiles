@@ -129,7 +129,7 @@ window#waybar {
 }
 #pulseaudio.sink,
 #wireplumber.icon {
-	margin-right: -0.4em;
+	margin-left: -0.4em;
 }
 
 /*#battery.icon.warning,*/
@@ -150,14 +150,16 @@ window#waybar {
 	padding: 0px 5px 0px 5px;
 	margin: 0px 5px 0px 5px;
 }
-#network.wifi.ssid,
+#network.wifi.icon,
 #battery.icon {
 	padding: 0px 5px 0px 5px;
 }
 
 #window,
 #custom-mako,
-#pulseaudio,
+#pulseaudio.sink,
+#pulseaudio.source,
+#pulseaudio.name,
 #wireplumber.icon,
 #idle_inhibitor {
 	padding: 0px 5px 0px 5px;
