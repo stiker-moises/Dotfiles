@@ -119,11 +119,11 @@
 		"max-length": 50
 	},
 	"pulseaudio#sink": {
-		"format": "{volume:3} {icon:1}",
-		"format-bluetooth": "{volume:3} {icon:1}",
+		"format": "{volume:2} {icon:1}",
+		"format-bluetooth": "{volume:2} {icon:1}",
 		"tooltip": true,
-//		"format-muted": "{volume:3} 󰝟",
-		"format-muted": "{volume:3} {icon:1}",
+//		"format-muted": "{volume:2} 󰝟",
+		"format-muted": "{volume:2} {icon:1}",
 		"format-icons": {
 			"headphone": "󰋋",
 			"headphone-muted": "󰟎",
@@ -152,11 +152,11 @@
 		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%- -l 2.0"
 	},
 	"wireplumber#icon": {
-		"format": "{volume:3} {icon:1}",
-		"format-bluetooth": "{volume:3} {icon:1}",
+		"format": "{volume:2} {icon:1}",
+		"format-bluetooth": "{volume:2} {icon:1}",
 		"tooltip": true,
-		"format-muted": "{volume:3} 󰝟",
-//		"format-muted": "{volume:3} {icon:1}",
+		"format-muted": "{volume:2} 󰝟",
+//		"format-muted": "{volume:2} {icon:1}",
 		"format-icons": {
 			"headphone": "󰋋",
 			"headphone-muted": "󰟎",
