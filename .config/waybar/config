@@ -209,12 +209,14 @@
 		},
 		"format": "{capacity:2} {icon:1}",
 		"format-plugged": "{icon}",
+		"format-charged": "{icon}",
 		"format-charging": "{capacity:2} {icon:1}",
 		"tooltip":false,
 		"format-icons": {
 			"discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" ],
 			"plugged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"charged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 		},
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
