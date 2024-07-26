@@ -210,6 +210,7 @@
 		"format": "{capacity:2} {icon:1}",
 		"format-plugged": "{icon}",
 		"format-charged": "{icon}",
+		"format-full": "{icon}",
 		"format-charging": "{capacity:2} {icon:1}",
 		"tooltip":false,
 		"format-icons": {
@@ -217,6 +218,7 @@
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" ],
 			"plugged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 			"charged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"full": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 		},
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
