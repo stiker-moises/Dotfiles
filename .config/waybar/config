@@ -223,6 +223,17 @@
 		"max-length": 25,
 		"on-click": "gnome-power-statistics"
 	},
+	"power-profiles-daemon": {
+		"format": "{icon:1}",
+		"tooltip-format": "Profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
+	},
 	"battery#time": {
 		"interval": 5,
 		"states": {
@@ -337,6 +348,7 @@
 		"modules": [ 
 			"battery#icon",
 			"battery#time",
+			"power-profiles-daemon"
 		],
 		"drawer": {
 			"transition-duration": 500,
