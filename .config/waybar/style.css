@@ -8,6 +8,7 @@
 #pulseaudio,
 #wireplumber.icon,
 #battery.icon,
+#power-profiles-daemon,
 #workspaces button.visible,
 #workspaces button:hover {
 	color: @theme_selected_bg_color;
@@ -37,6 +38,7 @@ window#waybar {
 #clock.2,
 #workspaces,
 #battery,
+#power-profiles-daemon,
 #network.wifi,
 #custom-mako,
 #mode,
@@ -80,6 +82,7 @@ window#waybar {
 #wireplumber.icon,
 #network.wifi,
 #battery,
+#power-profiles-daemon,
 #tray > .active,
 #workspaces button:hover {
 	opacity: 0.8;
@@ -94,6 +97,7 @@ window#waybar {
 #custom-mako:hover,
 #network.wifi:hover,
 #battery:hover,
+#power-profiles-daemon:hover,
 #tray > .active:hover {
 	opacity: 1;
 }
@@ -128,6 +132,7 @@ window#waybar {
 	margin-left: 5px;
 }
 #pulseaudio.sink,
+#power-profiles-daemon,
 #wireplumber.icon {
 	margin-left: -0.4em;
 }
@@ -146,6 +151,7 @@ window#waybar {
 #submap,
 #network.wifi.icon,
 #battery.time,
+#power-profiles-daemon,
 #network.disconnected {
 	padding: 0px 5px 0px 5px;
 	margin: 0px 5px 0px 5px;
