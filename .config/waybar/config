@@ -135,10 +135,9 @@
 		"max-length": 50
 	},
 	"pulseaudio#sink": {
-		"format": "{volume:2} {icon:1}",
+		"format": "<span rise='-2pt'>{volume:2}</span> {icon:1}",
 		"format-bluetooth": "{volume:2} {icon:1}",
 		"tooltip": true,
-//		"format-muted": "{volume:2} 󰝟",
 		"format-muted": "{volume:2} {icon:1}",
 		"format-icons": {
 			"headphone": "󰋋",
@@ -223,7 +222,7 @@
 			"warning": 30,
 			"critical": 5
 		},
-		"format": "{capacity:2} {icon:1}",
+		"format": "<span rise='-2pt'>{capacity:2}</span> {icon:1}",
 		"format-plugged": "{icon}",
 		"format-charged": "{icon}",
 		"format-full": "{icon}",
