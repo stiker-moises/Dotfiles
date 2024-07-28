@@ -17,11 +17,6 @@
 #workspaces button.urgent {
 	background-color: @theme_selected_bg_color;
 }
-#custom-mako,
-#idle_inhibitor {
-	margin-top: 1px;
-	margin-bottom: -1px;
-}
 #clock.1,
 #clock.3,
 #pulseaudio-slider,
@@ -151,12 +146,12 @@ window#waybar {
 #submap,
 #network.wifi.icon,
 #battery.time,
-#power-profiles-daemon,
 #network.disconnected {
 	padding: 0px 5px 0px 5px;
 	margin: 0px 5px 0px 5px;
 }
-#network.wifi.icon,
+#power-profiles-daemon,
+#network.ssid,
 #battery.icon {
 	padding: 0px 5px 0px 5px;
 }
