@@ -71,10 +71,26 @@
 	},
 	"clock#2": {
 		"format": "{:%H:%M}",
-		"tooltip-format": "<big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
+		"tooltip-format": "  <big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
 		"timezone": "America/Indiana/Indianapolis",
 		"interval": 1,
-		"on-click": "qtalarm --toggleOnDup"
+		"on-click": "qtalarm --toggleOnDup",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col" : 3,
+			"weeks-pos" : "right",
+			"on-scroll" : 1,
+			"format": {
+				"months":     "<span color='#ffead3'><b>{}</b></span>",
+				"days":       "<span color='#ecc6d9'>{}</span>",
+				"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+				"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+				}
+			},
+		"actions":  {
+			"on-click-right": "mode",
+		}
 	},
 	"clock#3": {
 		"format": "{:%m-%d}",
@@ -85,8 +101,8 @@
 		"format": "{icon:1}",
 		"tooltip": false,
 		"format-icons": {
-			"activated": "󰈈",
-			"deactivated": "󰈉"
+			"activated": "󰅶",
+			"deactivated": "󰾪"
 		}
 	},
 	"network#icon": {
@@ -358,8 +374,8 @@
 	"group/misc": {
 		"orientation": "horizontal",
 		"modules": [ 
-			"custom/mako",
-			"idle_inhibitor"
+			"idle_inhibitor",
+			"custom/mako"
 		],
 		"drawer": {
 			"transition-duration": 500,
