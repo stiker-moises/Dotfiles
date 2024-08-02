@@ -226,7 +226,7 @@ DEFAULT = ""
 dedup = false
 dedup_inactive_fullscreen = false
 delim = " "
-workspace = "<b>{name}</b>:{delim}{clients}"
+workspace = "<b>{name}:</b>{delim}{clients}"
 workspace_empty = "<b>{name}</b>"
 client = "<span alpha='70%'>{icon}</span>"
 client_fullscreen = "｢{icon}｣"
