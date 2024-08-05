@@ -142,6 +142,8 @@
 		"format-icons": {
 			"headphone": "󰋋",
 			"headphone-muted": "󰟎",
+			"alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo": "󰋋",
+			"alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4.iec958-stereo-muted": "󰟎",
 			"hdmi": "󰔂",
 			"hdmi-muted": "󰠻",
 			"hands-free": "󱡏",
