@@ -8,19 +8,8 @@
   programs.steam.enable = true;
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  nixpkgs.config.packageOverrides = pkgs: {
-  	intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
-	};
-  hardware.opengl = {
-  	enable = true;
-  	extraPackages = with pkgs; [
-  		intel-media-driver
-  		intel-vaapi-driver
-  		libvdpau-va-gl
-  	];
-  };
-  environment.sessionVariables = { LIBVA_DRIVER_NAME = "i965"; };
-
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  hardware.graphics.driSupport32Bit = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
