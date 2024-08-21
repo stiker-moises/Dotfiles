@@ -36,12 +36,16 @@
     easyeffects
     eza
     ffmpegthumbnailer
+    sound-theme-freedesktop
     libsForQt5.ffmpegthumbs
     firefox
     flat-remix-icon-theme
     galculator
     gammastep
     git
+    glib
+    gsettings-desktop-schemas
+    libnotify
     wayshot
     handlr-regex
     hyprkeys
@@ -86,6 +90,8 @@
     wayland-pipewire-idle-inhibit
     wl-clipboard-rs
     wl-mirror
+    libsForQt5.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
     wljoywake
     xdg-desktop-portal-hyprland
     xdg-user-dirs
@@ -102,6 +108,7 @@
     noto-fonts-cjk-serif
     noto-fonts-lgc-plus
     nerdfonts
+    font-awesome
   ];
   security.rtkit.enable = true;
   services.pipewire = {
@@ -114,6 +121,7 @@
   security.doas.enable = true;
   security.sudo.enable = false;
   security.doas.extraRules = [{
+  groups = [ "wheel" ];
   keepEnv = true;
   persist = true;
 }];
