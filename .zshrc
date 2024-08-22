@@ -86,6 +86,7 @@ bindkey '^?' backward-delete-char
 bindkey '^[OH' beginning-of-line
 bindkey '^[OF' end-of-line
 bindkey '[[5~' up-line-or-history
+bindkey "''${key[Up]}" up-line-or-search
 bindkey '[[6~' down-line-or-history
 bindkey '^[[A' history-beginning-search-backward-end
 bindkey '^[[B' history-beginning-search-forward-end
@@ -169,7 +170,7 @@ zstyle ':completion:*:ssh:*' group-order \
    hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /run/current-system/sw/share/zsh/plugins/nix/nix-zsh-completions.plugin.zsh
 HISTFILE=~/.local/share/zsh/histfile
 HISTSIZE=1024
 SAVEHIST=4096
