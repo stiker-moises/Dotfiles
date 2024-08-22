@@ -29,4 +29,5 @@ outline-width=0
 corner-radius=0
 fuzzy-match=true
 scale=true
-selection-background-padding=3, -1
+selection-background-padding=3,999999999
+
