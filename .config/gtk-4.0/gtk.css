@@ -1,0 +1,45 @@
+* {
+	all: unset;
+	outline-width: 0px;
+}
+@import url("/home/communist/.themes/ancomblackred/gtk-4.0/gtk.css");
+/* remove window title from Client-Side Decorations */
+.solid-csd headerbar .title {
+    font-size: 0;
+}
+
+/* hide extra window decorations/double border */
+window decoration {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+* {
+  text-shadow: none;
+}
+
+#zim-pageview text {
+    background-color: #000000;  /* changes the background color of the Zim's page editor */
+    color: #ffffff; /* foreground text color */
+}
+
+#zim-toc-widget {
+  color: #2b2b2b;  /* sets the color of the border line of the Table of Content plugin */
+  opacity: 0.9;    /* give the ToC some nice transparency */
+  font-size: 12px; /* ToC font size */
+  }
+
+#zim-toc-widget scrolledwindow treeview {
+  color: #BABABA;  /* sets the color of the text within the Table of Content plugin */
+  opacity: 1;
+  }
+
+#zim-sidepane {
+	    background-color: #000000;  /* changes the background color of the Zim's sidepane */
+		    color: #ffffff; /* foreground text color */
+}
+
+#zim-pageindex {
+		    background-color: #000000;  /* changes the background color of the Zim's sidepane */
+		    color: #ffffff; /* foreground text color */
+}
