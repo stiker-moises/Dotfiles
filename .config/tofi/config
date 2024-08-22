@@ -18,7 +18,7 @@ selection-match-color=fff
 selection-background=c00
 #font
 hint-font = false
-font=/usr/share/fonts/noto/NotoSansMono-Regular.ttf
+font=/run/current-system/sw/share/X11/fonts/NotoSansMono[wdth,wght].ttf
 font-size=14
 #size
 height=50%
