@@ -4,22 +4,22 @@
 
 { config, pkgs, ... }:
 {
-  programs.hyprland.enable = true;
-  programs.steam.enable = true;
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  hardware.graphics.driSupport32Bit = true;
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
+	programs.hyprland.enable = true;
+	programs.steam.enable = true;
+	programs.zsh.enable = true;
+	users.defaultUserShell = pkgs.zsh;
+	environment.systemPackages = with pkgs; [
     alacritty
+    home-manager
+    gvfs
+    pulseaudio
     ananicy-cpp
     ananicy-rules-cachyos
     libsForQt5.ark
     bat
     blueberry
     copyq
+    dconf-editor
     deluge-gtk
     earlyoom
     easyeffects
@@ -51,7 +51,6 @@
     mako
     mpv
     neovim
-    noto-fonts-monochrome-emoji
     pavucontrol
     lxqt.pcmanfm-qt
     pinta
@@ -59,6 +58,7 @@
     polkit_gnome
     power-profiles-daemon
 #    proton-ge-bin
+	protonup-qt
     libsForQt5.qt5ct
     kdePackages.qt6ct
     resources
@@ -90,15 +90,28 @@
     zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
+    libappindicator
+    gtk3
   ];
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-lgc-plus
+    noto-fonts-monochrome-emoji
     nerdfonts
     font-awesome
   ];
+fonts = {
+  fontconfig = {
+    defaultFonts = {
+      		serif = [  "Noto Serif Medium" ];
+      		sansSerif = [ "Noto Sans Medium" ];
+      		monospace = [ "Noto Sans Mono Medium" ];
+    };
+  };
+};
+
   security.rtkit.enable = true;
   services.pipewire = {
   	enable = true;
@@ -114,6 +127,12 @@
   keepEnv = true;
   persist = true;
 }];
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+  services.devmon.enable = true;
+  environment.variables = rec {
+    GSETTINGS_SCHEMA_DIR="${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
+  };
   systemd.services.keyd = {
     description = "key remapping daemon";
     enable = true;
@@ -125,4 +144,8 @@
     requires = [ "local-fs.target" ];
     after = [ "local-fs.target" ];
   };
+  	qt = {
+  		enable = true;
+  		platformTheme = "qt5ct";
+	};
 }
