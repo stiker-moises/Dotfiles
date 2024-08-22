@@ -135,7 +135,7 @@
 		"max-length": 50
 	},
 	"pulseaudio#sink": {
-		"format": "<span rise='-2pt'>{volume:2}</span> {icon:1}",
+		"format": "{volume:2} {icon:1}",
 		"format-bluetooth": "{volume:2} {icon:1}",
 		"tooltip": true,
 		"format-muted": "{volume:2} {icon:1}",
