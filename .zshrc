@@ -40,7 +40,7 @@ unsetopt ALL_EXPORT
 #############
 alias ll='eza -al'
 alias jq='jaq'
-alias upd='doas nixos-rebuild switch --upgrade ; rm ~/.cache/tofi-drun && notify-send --urgency=low "Update completed" && pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &!'
+alias upd='doas nixos-rebuild switch --upgrade && notify-send --urgency=low "Update completed" && rm ~/.cache/tofi-drun 2> /dev/null ; pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias supd='paru -Syu --confirm --review && notify-send --urgency=low "Safe Update completed" && pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias updd='doas reflector --protocol https --threads 4 --latest 20 --sort rate --save /etc/pacman.d/mirrorlist && notify-send --urgency=low "Mirrorlists updated" && paru -Syu --noconfirm && notify-send --urgency=low "Update completed" && pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias ins='paru -S'
