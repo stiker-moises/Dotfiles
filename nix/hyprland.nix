@@ -8,6 +8,8 @@
 	programs.steam.enable = true;
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
+	hardware.bluetooth.enable = true;
+  	hardware.bluetooth.powerOnBoot = true;
 	environment.systemPackages = with pkgs; [
     alacritty
     home-manager
@@ -19,7 +21,7 @@
     bat
     blueberry
     copyq
-    dconf-editor
+    dconf
     deluge-gtk
     earlyoom
     easyeffects
@@ -32,7 +34,6 @@
     galculator
     gammastep
     git
-    glib
     gsettings-desktop-schemas
     libnotify
     wayshot
@@ -52,7 +53,7 @@
     mpv
     neovim
     pavucontrol
-    lxqt.pcmanfm-qt
+    pcmanfm
     pinta
     polkit
     polkit_gnome
@@ -91,7 +92,6 @@
     zsh-autosuggestions
     zsh-syntax-highlighting
     libappindicator
-    gtk3
   ];
   fonts.packages = with pkgs; [
     noto-fonts
@@ -103,6 +103,7 @@
     font-awesome
   ];
 fonts = {
+fontDir.enable = true;
   fontconfig = {
     defaultFonts = {
       		serif = [  "Noto Serif Medium" ];
@@ -127,12 +128,10 @@ fonts = {
   keepEnv = true;
   persist = true;
 }];
+  services.power-profiles-daemon.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.devmon.enable = true;
-  environment.variables = rec {
-    GSETTINGS_SCHEMA_DIR="${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
-  };
   systemd.services.keyd = {
     description = "key remapping daemon";
     enable = true;
