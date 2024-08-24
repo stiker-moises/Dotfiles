@@ -1,4 +1,5 @@
-source $PWD/.config/nvim/modules/init.vimrc
-source $PWD/.config/nvim/modules/general.vimrc
-source $PWD/.config/nvim/modules/plugs.vimrc
-source $PWD/.config/nvim/modules/keys.vimrc
+colorscheme 256_noir
+source ~/.config/nvim/modules/init.vimrc
+source ~/.config/nvim/modules/general.vimrc
+source ~/.config/nvim/modules/plugs.vimrc
+source ~/.config/nvim/modules/keys.vimrc
