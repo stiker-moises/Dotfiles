@@ -51,7 +51,7 @@ alias pacl='paru -Scc && pw-play --volume=0.2 "/run/current-system/sw/share/soun
 alias orphans='paru -Qtdq | paru -Rns - && pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &!'
 alias sl=eza
 alias ls=eza
-alias snv='doas nvim'
+alias snv='doas nvim -u $HOME/.config/nvim/doasinit.vim'
 alias nv=nvim
 alias du=dua
 alias reflect='doas reflector --protocol https --threads 4 --latest 200 --fastest 50 --sort rate --save /etc/pacman.d/mirrorlist && notify-send --urgency=low "Mirrorlist updated" && pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &!'
