@@ -86,10 +86,11 @@ bindkey '^?' backward-delete-char
 bindkey '^[OH' beginning-of-line
 bindkey '^[OF' end-of-line
 bindkey '[[5~' up-line-or-history
-bindkey "''${key[Up]}" up-line-or-search
 bindkey '[[6~' down-line-or-history
-bindkey '^[[A' history-beginning-search-backward-end
-bindkey '^[[B' history-beginning-search-forward-end
+bindkey '^[[A' history-substring-search-up
+bindkey '^[OA' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[OB' history-substring-search-down
 bindkey '^r' history-incremental-search-backward
 bindkey ' ' magic-space    # also do history expansion on space
 bindkey '^I' complete-word # complete on tab, leave expansion to _expand
@@ -170,7 +171,7 @@ zstyle ':completion:*:ssh:*' group-order \
    hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
-source /run/current-system/sw/share/zsh/plugins/nix/nix-zsh-completions.plugin.zsh
+#source /run/current-system/sw/share/zsh/plugins/nix/nix-zsh-completions.plugin.zsh
 HISTFILE=~/.local/share/zsh/histfile
 HISTSIZE=1024
 SAVEHIST=4096
