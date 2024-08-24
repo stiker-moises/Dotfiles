@@ -63,6 +63,8 @@ environment.systemPackages = with pkgs; [
 	mpv
 	neovim
 	pavucontrol
+	nodejs-slim
+#	vimPlugins.coc-nvim
 	pcmanfm
 	pinta
 	polkit
