@@ -2,7 +2,15 @@
 {
 programs = {
 	hyprland.enable = true;
-	steam.enable = true;
+	steam = {
+		enable = true;
+		remotePlay.openFirewall = true;
+		dedicatedServer.openFirewall = true;
+		localNetworkGameTransfers.openFirewall = true;
+		extraCompatPackages = with pkgs; [
+			proton-ge-bin
+		];
+	};
 	zsh = {
   		enable = true;
   		autosuggestions.enable = true;
@@ -14,6 +22,8 @@ programs = {
   		defaultEditor = true;
 	};
 };
+
+
 users.defaultUserShell = pkgs.zsh;
 hardware.bluetooth = {
 	enable = true;
@@ -21,14 +31,10 @@ hardware.bluetooth = {
 };
 environment.systemPackages = with pkgs; [
 	alacritty
-	zsh-history-substring-search
-	posy-cursors
-	gvfs
-	pulseaudio
 	ananicy-cpp
 	ananicy-rules-cachyos
-	libsForQt5.ark
 	bat
+	bfcal
 	blueberry
 	copyq
 	dconf
@@ -37,63 +43,64 @@ environment.systemPackages = with pkgs; [
 	easyeffects
 	eza
 	ffmpegthumbnailer
-	sound-theme-freedesktop
-	libsForQt5.ffmpegthumbs
 	firefox
 	flat-remix-icon-theme
 	galculator
 	gammastep
 	git
 	gsettings-desktop-schemas
-	libnotify
-	wayshot
+	gvfs
 	handlr-regex
 	hyprkeys
 	hyprland
 	hyprland-autoname-workspaces
 	iwgtk
 	jaq
+	kdePackages.qt6ct
+	kdePackages.qtstyleplugin-kvantum
 	keyd
-	themechanger
-	pipewire
-	wireplumber
+	libappindicator
+	libnotify
+	libsForQt5.ark
+	libsForQt5.ffmpegthumbs
+	libsForQt5.qt5ct
+	libsForQt5.qtstyleplugin-kvantum
 	light
 	loupe
 	mako
 	mpv
 	neovim
-	pavucontrol
 	nodejs-slim
-#	vimPlugins.coc-nvim
+	pavucontrol
 	pcmanfm
 	pinta
+	pipewire
 	polkit
 	polkit_gnome
+	posy-cursors
 	power-profiles-daemon
-#	proton-ge-bin
-	protonup-qt
-	libsForQt5.qt5ct
-	kdePackages.qt6ct
+	pulseaudio
 	resources
 	ripgrep
 	sd
 	slurp
+	sound-theme-freedesktop
 	speedread
 	steam
-#	python312Packages.subliminal
-	swww
-	waypaper
 	swayidle
 	swaylock-effects
+	swww
 	tesseract
+	themechanger
 	thunderbird
 	tofi
 	waybar
 	wayland-pipewire-idle-inhibit
+	waypaper
+	wayshot
+	wireplumber
 	wl-clipboard-rs
 	wl-mirror
-	libsForQt5.qtstyleplugin-kvantum
-	kdePackages.qtstyleplugin-kvantum
 	wljoywake
 	xdg-desktop-portal-hyprland
 	xdg-user-dirs
@@ -102,8 +109,9 @@ environment.systemPackages = with pkgs; [
 	zim
 	zsh
 	zsh-autosuggestions
+	zsh-history-substring-search
 	zsh-syntax-highlighting
-	libappindicator
+#	python312Packages.subliminal
 ];
 fonts = {
 	packages = with pkgs; [
