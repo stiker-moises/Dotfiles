@@ -14,8 +14,6 @@ abbrev waht what
 abbrev tehn then
 abbrev attribuet attribute
 
-colorscheme 256_noir
-
 "cursorline highlighting
 set cursorline
 highlight CursorLine                        guifg=NONE guibg=#110000
