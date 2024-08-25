@@ -37,6 +37,7 @@ environment.systemPackages = with pkgs; [
 	copyq
 	dconf
 	deluge-gtk
+	doas-sudo-shim
 	dua
 	earlyoom
 	easyeffects
