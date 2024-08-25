@@ -102,6 +102,7 @@ environment.systemPackages = with pkgs; [
 	wl-clipboard-rs
 	wl-mirror
 	wljoywake
+	xclip
 	xdg-desktop-portal-hyprland
 	xdg-user-dirs
 	xwayland
@@ -164,6 +165,11 @@ services = {
 	gvfs.enable = true;
 	power-profiles-daemon.enable = true;
 	udisks2.enable = true;
+	ananicy =  {
+		enable = true;
+		package = pkgs.ananicy-cpp;
+		rulesProvider = pkgs.ananicy-rules-cachyos;
+	};
 #	keyd = {
 #		description = "key remapping daemon";
 #		enable = true;
@@ -214,4 +220,5 @@ boot = {
 	];
 	kernelPackages = pkgs.linuxPackages_zen;
 };
+environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
