@@ -220,6 +220,7 @@ boot = {
 		"rd.udev.log_priority=3"
 	];
 	kernelPackages = pkgs.linuxPackages_zen;
+	loader.timeout = 1;
 };
 environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
