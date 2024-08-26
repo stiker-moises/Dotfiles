@@ -136,10 +136,6 @@ mods = "Control|Shift"
 [window]
 dynamic_padding = true
 
-[window.dimensions]
-columns = 75
-lines = 5
-
 [window.padding]
 x = 2
 y = 2
