@@ -10,6 +10,8 @@ Step 2. Get the script ready, make sure to delete the dotfiles folder when you'r
 
 $ nmtui
 
+$ nix-shell -p git
+
 $ git clone https://gitlab.com/that1communist/dotfiles.git && cd dotfiles && cp ./.z* ~/ && cp ./etc/nixos/sys.nix /etc/nixos/sys.nix
 
 $ nano /etc/nixos/configuration.nix
