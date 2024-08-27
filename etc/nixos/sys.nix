@@ -171,17 +171,6 @@ services = {
 		package = pkgs.ananicy-cpp;
 		rulesProvider = pkgs.ananicy-rules-cachyos;
 	};
-#	keyd = {
-#		description = "key remapping daemon";
-#		enable = true;
-#		serviceConfig = {
-#			Type = "simple";
-#			ExecStart = "${pkgs.keyd}/bin/keyd";
-#		};
-#		wantedBy = [ "sysinit.target" ];
-#		requires = [ "local-fs.target" ];
-#		after = [ "local-fs.target" ];
-#	};
 	keyd.enable = true;
 	udev.extraRules = ''
 	SUBSYSTEM=="power_supply",ENV{POWER_SUPPLY_ONLINE}=="0",RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver"
@@ -209,12 +198,11 @@ boot = {
 		"vm.swappiness" = "10";
 	};
 	kernelParams = [
-#		"zswap.enabled=1"
-#		"pcie_acs_override=downstream,multifunction"
 		"amd_pstate=active"
-#		"panic=1"
-		"nowatchdog"
+		"loglevel=3"
 		"nmi_watchdog=0"
+		"nowatchdog"
+		"panic=5"
 		"quiet"
 		"rd.systemd.show_status=auto"
 		"rd.udev.log_priority=3"
@@ -223,4 +211,11 @@ boot = {
 	loader.timeout = 1;
 };
 environment.sessionVariables.NIXOS_OZONE_WL = "1";
+fileSystems."/" = {
+	options = [
+		"noatime"
+		"nodiratime"
+		"discard"
+	];
+};
 }
