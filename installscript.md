@@ -4,8 +4,6 @@ install script
 
 Step 1. Install NixOS
 
-
-
 Step 2. Get the script ready, make sure to delete the dotfiles folder when you're done
 
 $ nmtui
@@ -19,6 +17,10 @@ $ nano /etc/nixos/configuration.nix
 set hostname/import sys.nix
 
 $ sudo nixos-rebuild switch --upgrade
+
+$ reboot
+
+$ setupeverything
 
 Step 3. Do one of the system-specific commands, should be one of the following:
 
