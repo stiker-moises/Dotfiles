@@ -2,23 +2,21 @@
 install script
 ==============
 
-Step 1. Install Arch
+Step 1. Install NixOS
 
-$ iwctl
-$ station wlan0 connect 'wifiname'
-$ exit
-$ archinstall
-	a. f2fs if ssd, ext4 if hdd
-	b. linux-zen
-	c. install git iwd zsh 
-	d. enable multilib
-	e. Systemd-boot
+
 
 Step 2. Get the script ready, make sure to delete the dotfiles folder when you're done
 
-$ git clone https://gitlab.com/that1communist/dotfiles.git && cd dotfiles && cp ./.z* ~/ && zsh
+$ nmtui
 
-$ setupeverything
+$ git clone https://gitlab.com/that1communist/dotfiles.git && cd dotfiles && cp ./.z* ~/ && cp ./etc/nixos/sys.nix /etc/nixos/sys.nix
+
+$ nano /etc/nixos/configuration.nix
+
+set hostname/import sys.nix
+
+$ sudo nixos-rebuild switch --upgrade
 
 Step 3. Do one of the system-specific commands, should be one of the following:
 
@@ -37,15 +35,6 @@ $ setupintel
 Intel for cards pre-2017
 $ setupintelold
 
-Step 4. Optional packages:
+Step 4. Optional .nix files:
 
-$ ins telegram-desktop-userfonts-bin adwaita-for-steam nheko
-
-Step 5. Setup seahorse
-open seahorse
-Plus at the top left
-password keyring
-
-If you don't want to be prompted for a password every time, leave it blank, if you want everything to be extra secure, give it a password.
-	  
-```
+cp /tmp/dotfiles/etc/nixos/(cat /etc/hostname).nix /etc/nixos/
