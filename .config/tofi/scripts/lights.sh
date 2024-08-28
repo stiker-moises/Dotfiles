@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/zsh
 RET=$(echo -e "Toggle\nDaylight\nNight\nDim" | tofi --prompt-text " " --height 148 --width 125 )
 case $RET in
 	Daylight) python ~/.config/tofi/scripts/broadcast_color.py 41134 0 65535 7000 ;;
