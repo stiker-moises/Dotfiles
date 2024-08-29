@@ -24,7 +24,7 @@ set hostname/import sys.nix
 
 $ sudo nixos-rebuild switch --upgrade
 
-$ reboot
+$ zsh
 
 $ setupeverything
 
