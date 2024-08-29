@@ -2,7 +2,7 @@
 	all: unset;
 	outline-width: 0px;
 }
-@import url("/home/communist/.themes/ancomblackred/gtk-4.0/gtk.css");
+@import url("/home/username/.themes/ancomblackred/gtk-4.0/gtk.css");
 /* remove window title from Client-Side Decorations */
 .solid-csd headerbar .title {
     font-size: 0;
