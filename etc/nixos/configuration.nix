@@ -9,6 +9,7 @@ imports = [
 	./hardware-configuration.nix
 	./sys.nix
 	./anarchy-desktop.nix
+	./amd.nix
 ];
 
 # Bootloader.
