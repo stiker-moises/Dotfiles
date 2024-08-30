@@ -6,10 +6,10 @@
 
 {
 imports = [
+	./amd.nix
+	./anarchy-desktop.nix
 	./hardware-configuration.nix
 	./sys.nix
-	./anarchy-desktop.nix
-	./amd.nix
 ];
 
 # Bootloader.
@@ -17,18 +17,7 @@ boot.loader = {
 	systemd-boot.enable = true;
 	efi.canTouchEfiVariables = true;
 };
-networking = {
-	hostName = "anarchy-desktop";
-	networkmanager.enable = false;
-	wireless.iwd.settings = {
-		IPv6 = {
-			Enabled = true;
-		};
-		Settings = {
-			AutoConnect = true;
-		};
-	};
-};
+networking.hostName = "anarchy-desktop";
 # Set your time zone.
 time.timeZone = "America/Indiana/Indianapolis";
 
