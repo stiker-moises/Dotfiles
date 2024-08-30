@@ -16,7 +16,7 @@ $ git clone https://gitlab.com/that1communist/dotfiles.git
 
 $ cd dotfiles
 
-$ cp ./.z* ~/ && 
+$ cp ./.z* ~/
 
 $ sudo cp -n ./etc/nixos/ /etc/nixos/
 
