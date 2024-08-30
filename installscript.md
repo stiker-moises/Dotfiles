@@ -16,11 +16,13 @@ $ git clone https://gitlab.com/that1communist/dotfiles.git
 
 $ cd dotfiles
 
-$ cp ./.z* ~/ && sudo cp ./etc/nixos/sys.nix /etc/nixos/sys.nix
+$ cp ./.z* ~/ && 
+
+$ sudo cp -n ./etc/nixos/ /etc/nixos/
 
 $ sudo nano /etc/nixos/configuration.nix
 
-set hostname/import sys.nix
+set hostname, remove networking line, import sys.nix/(intel amd nvidia).nix
 
 $ sudo nixos-rebuild switch --upgrade
 
