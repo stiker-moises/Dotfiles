@@ -106,6 +106,7 @@ environment.systemPackages = with pkgs; [
 	xclip
 	xdg-desktop-portal-hyprland
 	xdg-user-dirs
+	xdg-utils
 	xwayland
 	xwaylandvideobridge
 	zim
