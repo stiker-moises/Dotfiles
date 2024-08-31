@@ -40,4 +40,7 @@ Step 6. Install your own software
     B. Add your software by editing by copying my anarchy-desktop.nix to your <hostname>.nix
         $ doas cp /etc/nixos/anarchy-desktop.nix /etc/nixos/$(cat /etc/hostname).nix
         $ snv /etc/nixos/
+    
+Step 7. Enable unstable (optional)
+$ doas nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 ```
