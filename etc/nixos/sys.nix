@@ -63,10 +63,10 @@ environment.systemPackages = with pkgs; [
 	keyd
 	libappindicator
 	libnotify
-	libsForQt5.ark
-	libsForQt5.ffmpegthumbs
+	kdePackages.ark
+	kdePackages.ffmpegthumbs
 	libsForQt5.qt5ct
-	libsForQt5.qtstyleplugin-kvantum
+	kdePackages.qtstyleplugin-kvantum
 	light
 	loupe
 	mako
@@ -187,7 +187,6 @@ services = {
 qt = {
 	enable = true;
 	platformTheme = "qt5ct";
-	style = "kvantum";
 };
 boot = {
 	kernelModules = [ "tcp_bbr" ];
