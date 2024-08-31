@@ -9,6 +9,7 @@ hardware.graphics = {
 		libvdpau-va-gl
 	];
 };
+#exists for legacy reasons, remove after next nixos update
 #hardware.opengl = {
 #	enable = true;
 #	extraPackages = with pkgs; [
