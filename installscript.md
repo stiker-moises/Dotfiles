@@ -2,7 +2,7 @@
 Install Script
 ==============
 
-Step 1. Install NixOS
+Step 1. Install NixOS, no desktop.
 
 Step 2. Get connected to WiFi, ethernet is automatic
 
