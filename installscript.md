@@ -34,13 +34,15 @@ Step 5. hash out networkmanager line, add iwd.nix
 
 $ snv /etc/nixos/configuration.nix
 
-Step 6. Install your own software
+Step 6. Enable unstable (optional)
+$ doas nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+
+$ upd
+
+Step 7. Install your own software
     A. Edit your configuration.nix and dd <hostname>.nix to the list of imports
         $ snv /etc/nixos/configuration.nix
     B. Add your software by editing by copying my anarchy-desktop.nix to your <hostname>.nix
         $ doas cp /etc/nixos/anarchy-desktop.nix /etc/nixos/$(cat /etc/hostname).nix
         $ snv /etc/nixos/
-    
-Step 7. Enable unstable (optional)
-$ doas nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 ```
