@@ -48,7 +48,8 @@ environment.systemPackages = with pkgs; [
 	galculator
 	gammastep
 	git
-	gnome.gnome-power-manager
+#	gnome.gnome-power-manager
+	gnome-power-manager
 	gsettings-desktop-schemas
 	gvfs
 	handlr-regex
