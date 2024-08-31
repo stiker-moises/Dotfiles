@@ -9,6 +9,7 @@ imports = [
 	./amd.nix
 	./anarchy-desktop.nix
 	./hardware-configuration.nix
+	./iwd.nix
 	./sys.nix
 ];
 
