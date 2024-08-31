@@ -22,7 +22,7 @@ $ sudo cp -n ./etc/nixos/ /etc/nixos/
 
 $ sudo nano /etc/nixos/configuration.nix
 
-set hostname, remove networking line, import sys.nix/(intel amd nvidia).nix
+set hostname, import sys.nix/(intel amd nvidia).nix
 
 $ sudo nixos-rebuild switch --upgrade
 
@@ -30,23 +30,10 @@ $ zsh
 
 $ setupeverything
 
-Step 3. Do one of the system-specific commands, should be one of the following:
+$ snv /etc/nixos/configuration.nix
 
-Open source nvidia setup
-$ setupnouveau
-
-Proprietary nvidia setup
-$ setupnvidiabad
-
-AMD is the only simple one, fuck everyone else
-$ setupamd
-
-Intel for cards post-2017
-$ setupintel
-
-Intel for cards pre-2017
-$ setupintelold
+hash out networkmanager line, add iwd to imports
 
 Step 4. Optional .nix files:
 
-cp /tmp/dotfiles/etc/nixos/(cat /etc/hostname).nix /etc/nixos/
+$ doas cp /tmp/dotfiles/etc/nixos/(cat /etc/hostname).nix /etc/nixos/
