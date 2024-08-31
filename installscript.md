@@ -1,14 +1,14 @@
 ```
-install script
+Install Script
 ==============
 
 Step 1. Install NixOS
 
-Step 2. Get the script ready, make sure to delete the dotfiles folder when you're done
+Step 2. Get connected to WiFi, ethernet is automatic
 
 $ nmtui
 
-connect to wifi
+Step 3. Get the script ready, make sure to delete the dotfiles folder when you're done
 
 $ nix-shell -p git
 
@@ -20,9 +20,9 @@ $ cp ./.z* ~/
 
 $ sudo cp -n ./etc/nixos/ /etc/nixos/
 
-$ sudo nano /etc/nixos/configuration.nix
+Step 4. Set hostname, import sys.nix, and <intel amd nvidia>.nix depending on your GPU.
 
-set hostname, import sys.nix/(intel amd nvidia).nix
+$ sudo nano /etc/nixos/configuration.nix
 
 $ sudo nixos-rebuild switch --upgrade
 
@@ -30,10 +30,14 @@ $ zsh
 
 $ setupeverything
 
+Step 5. hash out networkmanager line, add iwd.nix
+
 $ snv /etc/nixos/configuration.nix
 
-hash out networkmanager line, add iwd to imports
-
-Step 4. Optional .nix files:
-
-$ doas cp /tmp/dotfiles/etc/nixos/(cat /etc/hostname).nix /etc/nixos/
+Step 6. Install your own software
+    A. Edit your configuration.nix and dd <hostname>.nix to the list of imports
+        $ snv /etc/nixos/configuration.nix
+    B. Add your software by editing by copying my anarchy-desktop.nix to your <hostname>.nix
+        $ doas cp /etc/nixos/anarchy-desktop.nix /etc/nixos/$(cat /etc/hostname).nix
+        $ snv /etc/nixos/
+```
