@@ -2,13 +2,13 @@
 Install Script
 ==============
 
-Step 1. Install NixOS, no desktop.
+Step 1. Install NixOS, no desktop:
 
-Step 2. Get connected to WiFi, ethernet is automatic
+Step 2. Get connected to WiFi, ethernet is automatic:
 
 $ nmtui
 
-Step 3. Get the script ready, make sure to delete the dotfiles folder when you're done
+Step 3. Get the script ready, make sure to delete the dotfiles folder when you're done:
 
 $ nix-shell -p git
 
@@ -20,7 +20,7 @@ $ cp ./.z* ~/
 
 $ sudo cp -n -r ./etc/nixos/ /etc/
 
-Step 4. Set hostname, import sys.nix, and <intel amd nvidia>.nix depending on your GPU.
+Step 4. Set hostname, import sys.nix, and <intel amd nvidia>.nix depending on your GPU:
 
 $ sudo nano /etc/nixos/configuration.nix
 
@@ -30,7 +30,7 @@ $ zsh
 
 $ setupeverything
 
-Step 5. hash out networkmanager line, add iwd.nix
+Step 5. hash out networkmanager line, add iwd.nix:
 
 $ snv /etc/nixos/configuration.nix
 
@@ -40,13 +40,13 @@ $ doas nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 
 $ upd
 
-Step 7. Install your own software
+Step 7. Install your own software:
 
-    A. Edit your configuration.nix and dd <hostname>.nix to the list of imports
+    A. Edit your configuration.nix and dd <hostname>.nix to the list of imports:
 
         $ snv /etc/nixos/configuration.nix
 
-    B. Add your software by editing by copying my anarchy-desktop.nix to your <hostname>.nix
+    B. Add your software by editing by copying my anarchy-desktop.nix to your <hostname>.nix:
 
         $ doas cp /etc/nixos/anarchy-desktop.nix /etc/nixos/$(cat /etc/hostname).nix
 
