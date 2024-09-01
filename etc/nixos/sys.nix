@@ -161,9 +161,8 @@ services = {
 	earlyoom = {
 		enable = true;
 		enableNotifications = true;
-		extraArgs = [ "-r 60 -m 3 -s 1 -n --avoid '(^|/)(init|Xorg|systemd|wlroots|Hyprland|sway|pipewire|wireplumber|pipewire-pulse|dbus-broker|dbus-broker-launch|earlyoom|mako|firefox|chromium|wfica|Xwayland|teams-for-linux|waybar|alacritty|nvim|gammastep|kanshi|easyeffects|swayidle|sworkstyle|hyprland-autoname-workspaces|swaddle|wljoywake)$'" ];
-		freeMemThreshold = 2;
-		freeSwapThreshold = 2;
+		extraArgs = [ "-r 60 -M 2048 -S 1024"
+		"--avoid '(^|/)(init|Xorg|systemd|wlroots|Hyprland|sway|pipewire|wireplumber|pipewire-pulse|dbus-broker|dbus-broker-launch|earlyoom|mako|firefox|chromium|wfica|Xwayland|teams-for-linux|waybar|alacritty|nvim|gammastep|kanshi|easyeffects|swayidle|sworkstyle|hyprland-autoname-workspaces|swaddle|wljoywake)$'" ];
 	};
 	devmon.enable = true;
 	gvfs.enable = true;
