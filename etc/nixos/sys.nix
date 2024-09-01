@@ -48,8 +48,8 @@ environment.systemPackages = with pkgs; [
 	galculator
 	gammastep
 	git
-#	gnome.gnome-power-manager
 	gnome-power-manager
+	gnome.gnome-power-manager
 	gsettings-desktop-schemas
 	gvfs
 	handlr-regex
@@ -58,15 +58,16 @@ environment.systemPackages = with pkgs; [
 	hyprland-autoname-workspaces
 	iwgtk
 	jaq
-	kdePackages.qt6ct
-	kdePackages.qtstyleplugin-kvantum
-	keyd
-	libappindicator
-	libnotify
 	kdePackages.ark
 	kdePackages.ffmpegthumbs
-	libsForQt5.qt5ct
+	kdePackages.qt6ct
 	kdePackages.qtstyleplugin-kvantum
+	kdePackages.qtstyleplugin-kvantum
+	keyd
+	killall
+	libappindicator
+	libnotify
+	libsForQt5.qt5ct
 	light
 	loupe
 	mako
