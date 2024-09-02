@@ -41,8 +41,9 @@ alias wc='xclip -o | wl-copy'
 alias xc='wl-paste | xclip -i'
 alias ll='eza -al'
 alias jq='jaq'
+alias ins='doas nvim -u $HOME/.config/nvim/doasinit.vim /etc/nixos/$HOSTNAME.nix' 
 alias upd='doas nixos-rebuild switch --upgrade && ( notify-send --urgency=low "Update completed" & rm ~/.cache/tofi-drun 2> /dev/null & pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &! ) || ( notify-send --urgency=low "Update Failed" & pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &! )'
-alias gar='doas nix-collect-garbage -d && doas nixos-rebuild boot && ( notify-send --urgency=low "Old images deleted" & pw-play --volume=0.2 "/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga" &! )'
+alias gar="doas nix-env -e '.*' & doas nix-collect-garbage -d && doas nixos-rebuild boot && ( notify-send --urgency=low 'Old images deleted' & pw-play --volume=0.2 '/run/current-system/sw/share/sounds/freedesktop/stereo/complete.oga' &! )"
 alias sl=eza
 alias ls=eza
 alias snv='doas nvim -u $HOME/.config/nvim/doasinit.vim'
