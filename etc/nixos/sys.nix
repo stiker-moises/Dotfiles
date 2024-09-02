@@ -49,13 +49,13 @@ environment.systemPackages = with pkgs; [
 	gammastep
 	git
 	gnome-power-manager
-	gnome.gnome-power-manager
 	gsettings-desktop-schemas
 	gvfs
 	handlr-regex
 	hyprkeys
 	hyprland
 	hyprland-autoname-workspaces
+	hyprlock
 	iwgtk
 	jaq
 	kdePackages.ark
@@ -92,7 +92,6 @@ environment.systemPackages = with pkgs; [
 	speedread
 	steam
 	swayidle
-	swaylock-effects
 	swww
 	tesseract
 	themechanger
