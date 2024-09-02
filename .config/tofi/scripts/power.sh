@@ -1,5 +1,5 @@
 #!/run/current-system/sw/bin/zsh
-RET=$(echo -e "Shutdown\nReboot\nSleep\nHibernate" | tofi --prompt-text " " --height 143 --width 125 )
+RET=$(echo -e "Shutdown\nReboot\nSleep\nHibernate" | tofi --prompt-text " " --height 143 --width 136 )
 case $RET in
 	Shutdown) systemctl poweroff ;;
 	Reboot) systemctl reboot ;;
