@@ -2,6 +2,7 @@
 {
 programs = {
 	hyprland.enable = true;
+	hyprlock.enable = true;
 	steam = {
 		enable = true;
 		dedicatedServer.openFirewall = true;
@@ -145,6 +146,7 @@ security = {
 			groups = [ "wheel" ];
 			keepEnv = true;
 			persist = true;
+			noLog = true;
 		}];
 	};
 };
