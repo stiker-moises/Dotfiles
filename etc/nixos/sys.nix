@@ -121,7 +121,7 @@ environment.systemPackages = with pkgs; [
 fonts = {
 	packages = with pkgs; [
 		font-awesome
-		nerdfonts
+		(nerdfonts.override { fonts = [ "Noto" ]; })
 		noto-fonts
 		noto-fonts-cjk-sans
 		noto-fonts-cjk-serif
