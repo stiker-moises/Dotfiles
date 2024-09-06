@@ -18,7 +18,7 @@ $ cd dotfiles
 
 $ cp ./.z* ~/
 
-$ sudo cp -n -r ./etc/nixos/ /etc/
+$ sudo cp -n -r ./etc/ /
 
 Step 4. Set hostname, import sys.nix, and <intel amd nvidia>.nix depending on your GPU:
 
