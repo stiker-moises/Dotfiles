@@ -62,7 +62,7 @@ environment.systemPackages = with pkgs; [
 	kdePackages.ark
 	kdePackages.ffmpegthumbs
 	kdePackages.qt6ct
-	kdePackages.qtstyleplugin-kvantum
+	libsForQt5.qtstyleplugin-kvantum
 	kdePackages.qtstyleplugin-kvantum
 	keyd
 	killall
