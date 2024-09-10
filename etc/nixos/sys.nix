@@ -3,6 +3,7 @@
 programs = {
 	hyprland.enable = true;
 	hyprlock.enable = true;
+	light.enable = true;
 	steam = {
 		enable = true;
 		dedicatedServer.openFirewall = true;
