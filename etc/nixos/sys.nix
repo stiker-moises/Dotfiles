@@ -34,7 +34,6 @@ environment.systemPackages = with pkgs; [
 	ananicy-cpp
 	ananicy-rules-cachyos
 	bat
-	bfcal
 	blueberry
 	copyq
 	dconf
@@ -85,7 +84,7 @@ environment.systemPackages = with pkgs; [
 	posy-cursors
 	power-profiles-daemon
 	pulseaudio
-#	python312Packages.subliminal
+	qtalarm
 	resources
 	ripgrep
 	sd
