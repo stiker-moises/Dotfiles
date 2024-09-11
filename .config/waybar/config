@@ -74,7 +74,7 @@
 		"tooltip-format": "  <big>   {:%H:%M:%S}</big>\n<tt><small>{calendar}</small></tt>",
 		"timezone": "America/Indiana/Indianapolis",
 		"interval": 1,
-		"on-click": "bfcal",
+		"on-click": "qtalarm --toggleOnDup",
 		"calendar": {
 			"mode": "month",
 			"mode-mon-col" : 3,
