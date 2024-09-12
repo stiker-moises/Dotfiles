@@ -3,7 +3,6 @@
 programs = {
 	hyprland.enable = true;
 	hyprlock.enable = true;
-	light.enable = true;
 	steam = {
 		enable = true;
 		dedicatedServer.openFirewall = true;
@@ -35,6 +34,7 @@ environment.systemPackages = with pkgs; [
 	ananicy-rules-cachyos
 	bat
 	blueberry
+	brightnessctl
 	copyq
 	dconf
 	deluge-gtk
@@ -69,7 +69,6 @@ environment.systemPackages = with pkgs; [
 	libappindicator
 	libnotify
 	libsForQt5.qt5ct
-	light
 	loupe
 	mako
 	mpv
