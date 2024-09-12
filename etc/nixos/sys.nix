@@ -105,6 +105,7 @@ environment.systemPackages = with pkgs; [
 	wireplumber
 	wl-clipboard-rs
 	wl-mirror
+	wl-restart
 	wljoywake
 	xclip
 	xdg-desktop-portal-hyprland
