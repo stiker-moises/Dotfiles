@@ -33,6 +33,7 @@ environment.systemPackages = with pkgs; [
 	ananicy-cpp
 	ananicy-rules-cachyos
 	bat
+	bato
 	blueberry
 	brightnessctl
 	copyq
