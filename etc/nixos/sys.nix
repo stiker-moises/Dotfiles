@@ -51,6 +51,7 @@ environment.systemPackages = with pkgs; [
 	gammastep
 	git
 	gnome-power-manager
+	gnome-software
 	gsettings-desktop-schemas
 	gvfs
 	handlr-regex
@@ -172,6 +173,13 @@ security = {
 	};
 };
 systemd = {
+	services.flatpak-repo = {
+		wantedBy = [ "multi-user.target" ];
+		path = [ pkgs.flatpak ];
+		script = ''
+			flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+		'';
+	};
 	user.services.polkit-gnome-authentication-agent-1 = {
 		description = "polkit-gnome-authentication-agent-1";
 		wantedBy = [ "graphical-session.target" ];
@@ -187,6 +195,7 @@ systemd = {
 	};
 };
 services = {
+	flatpak.enable = true;
 	pipewire = {
 		enable = true;
 		alsa = {
