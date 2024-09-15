@@ -3,7 +3,7 @@ RET=$(echo -e "Shutdown\nReboot\nSleep\nHibernate" | tofi --prompt-text " " --he
 case $RET in
 	Shutdown) systemctl poweroff ;;
 	Reboot) systemctl reboot ;;
-	Sleep) sleep 0.1 && powerprofilesctl set power-saver ; ( systemctl suspend & hyprlock -c ~/.config/hypr/hyprlock/hyprlock-nograce.conf ) && ( rg -qq 0 /sys/class/power_supply/*/online && powerprofilesctl set power-saver || powerprofilesctl set performance ) ;;
-	Hibernate) sleep 0.1 && powerprofilesctl set power-saver ; ( systemctl hibernate & hyprlock -c ~/.config/hypr/hyprlock/hyprlock-nograce.conf ) && ( rg -qq 0 /sys/class/power_supply/*/online && powerprofilesctl set power-saver || powerprofilesctl set performance ) ;;
+	Sleep) sleep 0.1 && powerprofilesctl set power-saver ; ( systemctl suspend & hyprlock -c ~/.config/hypr/hyprlock/hyprlock-screenshot.conf --immediate ) && ( rg -qq 0 /sys/class/power_supply/*/online && powerprofilesctl set power-saver || powerprofilesctl set performance ) ;;
+	Hibernate) sleep 0.1 && powerprofilesctl set power-saver ; ( systemctl hibernate & hyprlock -c ~/.config/hypr/hyprlock/hyprlock-screenshot.conf --immediate ) && ( rg -qq 0 /sys/class/power_supply/*/online && powerprofilesctl set power-saver || powerprofilesctl set performance ) ;;
 #	Logout) loginctl terminate-user $USER ;;
 esac
