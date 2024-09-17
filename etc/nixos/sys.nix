@@ -139,7 +139,6 @@ fonts = {
 		};
 	};
 };
-
 security = {
 	rtkit.enable = true;
 	sudo.enable = false;
@@ -234,7 +233,25 @@ qt = {
 	enable = true;
 	platformTheme = "qt5ct";
 };
+console = {
+#	font = "ter-132n";
+#	packages = [pkgs.terminus_font];
+#	useXkbConfig = true;
+	earlySetup = false;
+};
 boot = {
+	plymouth = {
+		enable = true;
+		theme = "hexagon_red";
+		themePackages = with pkgs; [
+			(adi1090x-plymouth-themes.override {
+			selected_themes = [ "hexagon_red" ];
+		})
+		themePackages = [(outputs.packages.${pkgs.system}.plymouth-theme.override {inherit (config.hm) colorScheme;})];
+		];
+	};
+	consoleLogLevel = 0;
+	initrd.verbose = false;
 	kernelModules = [ "tcp_bbr" ];
 	kernel.sysctl = {
 		"fs.inotify.max_user_watches" = "100000";
@@ -247,16 +264,23 @@ boot = {
 	};
 	kernelParams = [
 		"amd_pstate=active"
+		"boot.shell_on_fail"
 		"loglevel=3"
 		"nmi_watchdog=0"
 		"nowatchdog"
 		"panic=5"
 		"quiet"
-		"rd.systemd.show_status=auto"
+		"rd.systemd.show_status=false"
+		"rd.udev.log_level=3"
 		"rd.udev.log_priority=3"
+		"splash"
+		"udev.log_priority=3"
 	];
 	kernelPackages = pkgs.linuxPackages_zen;
-	loader.timeout = 1;
+	loader = {
+		timeout = 1;
+		systemd-boot.consoleMode = "max";
+	};
 };
 environment.sessionVariables = {
 	NIXOS_OZONE_WL = "1";
