@@ -246,8 +246,7 @@ boot = {
 		themePackages = with pkgs; [
 			(adi1090x-plymouth-themes.override {
 			selected_themes = [ "hexagon_red" ];
-		})
-		themePackages = [(outputs.packages.${pkgs.system}.plymouth-theme.override {inherit (config.hm) colorScheme;})];
+			})
 		];
 	};
 	consoleLogLevel = 0;
