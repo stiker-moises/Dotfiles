@@ -1,3 +1,3 @@
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	wl-restart -n 20 hyprland
 fi
