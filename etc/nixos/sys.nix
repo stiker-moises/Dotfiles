@@ -109,7 +109,6 @@ environment.systemPackages = with pkgs; [
 	wl-restart
 	wljoywake
 	xclip
-	xdg-desktop-portal-hyprland
 	xdg-user-dirs
 	xdg-utils
 	xwayland
@@ -171,6 +170,19 @@ security = {
 		}];
 	};
 };
+xdg.portal = {
+	enable = true;
+	xdgOpenUsePortal = true;
+	config = {
+		common = {
+			default = ["hyprland"];
+			"org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+		};
+	};
+	extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+    ];
+};
 systemd = {
 	services.flatpak-repo = {
 		wantedBy = [ "multi-user.target" ];
@@ -195,6 +207,7 @@ systemd = {
 };
 services = {
 	dbus.implementation = "broker";
+	journald.storage = "none";
 	greetd = {
 		enable = true;
 		settings = rec {
