@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
+imports = [
+	./${lib.removeSuffix "\n" (builtins.readFile /etc/hostname)}.nix
+];
 programs = {
 	hyprland.enable = true;
 	hyprlock.enable = true;
