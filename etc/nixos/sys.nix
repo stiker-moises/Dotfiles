@@ -194,6 +194,21 @@ systemd = {
 	};
 };
 services = {
+	dbus.implementation = "broker";
+	greetd = {
+		enable = true;
+		settings = rec {
+			default_session = {
+				command = "${pkgs.wl-restart}/bin/wl-restart -n 20 ${pkgs.hyprland}/bin/Hyprland > /dev/null";
+				user = config.services.getty.autologinUser;
+			};
+		};
+	};
+	kmscon = {
+		enable = true;
+		hwRender = true;
+		autologinUser = config.services.getty.autologinUser;
+	};
 	flatpak.enable = true;
 	pipewire = {
 		enable = true;
@@ -284,6 +299,7 @@ boot = {
 environment.sessionVariables = {
 	NIXOS_OZONE_WL = "1";
 	MOZ_ENABLE_WAYLAND = "1";
+	HOSTNAME = config.networking.hostName;
 };
 fileSystems."/" = {
 	options = [
