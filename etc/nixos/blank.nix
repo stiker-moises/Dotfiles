@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 {
+imports = [
+# uncomment your gpu
+#	./amd.nix
+#	./intel.nix
+#	./nvidia.nix
+];
 environment.systemPackages = with pkgs; [
 	#install things here
 ];
