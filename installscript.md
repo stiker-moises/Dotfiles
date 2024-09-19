@@ -12,7 +12,7 @@ Step 3. Get the script ready, make sure to delete the dotfiles folder when you'r
 
 $ nix-shell -p git
 
-$ git clone https://gitlab.com/that1communist/dotfiles.git 
+$ git clone https://github.com/stiker-moises/dotfiles.git
 
 $ cd dotfiles
 
