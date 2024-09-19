@@ -1,1 +1,1 @@
-EARLYOOM_ARGS="-r 60 -m 3 -s 1 -n --avoid '(^|/)(init|wlroots|firefox|chromium|sway|pipewire|dbus-broker|dbus-broker-launch|mako|sworkstyle|pipewire-pulse|wfica|systemd|swayidle|Xwayland|earlyoom|wireplumber)$'"
+EARLYOOM_ARGS="-r 60 -m 3 -s 1 -n --avoid '(^|/)(init|wlroots|firefox|chromium|sway|pipewire|dbus-broker|dbus-broker-launch|mako|sworkstyle|pipewire-pulse|wfica|systemd|swayidle|Xwayland|earlyoom|wireplumber|teams-for-linux|waybar|Hyprland|swaddle|wljoywake|alacritty|nvim|gammastep|hyprland-autoname-workspaces|kanshi|easyeffects)$'"
