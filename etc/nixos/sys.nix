@@ -178,13 +178,14 @@ xdg.portal = {
 	xdgOpenUsePortal = true;
 	config = {
 		common = {
-			default = ["hyprland"];
+			default = ["hyprland" "hyprland"];
 			"org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
 		};
 	};
 	extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-    ];
+		pkgs.xdg-desktop-portal-hyprland
+		pkgs.xdg-desktop-portal-gtk
+	];
 };
 systemd = {
 	services.flatpak-repo = {
@@ -324,5 +325,4 @@ fileSystems."/" = {
 		"discard"
 	];
 };
-
 }
